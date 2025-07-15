@@ -67,7 +67,7 @@ export default function Contact() {
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             {t("contact.title")}
           </h2>
-          <div className="w-20 h-1 bg-emerald-400 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-amber-400 mx-auto mb-6"></div>
           <p className="text-zinc-300 max-w-2xl mx-auto">
             {t("contact.subtitle")}
           </p>
@@ -83,7 +83,7 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="bg-zinc-700 p-3 rounded-lg mr-4">
-                  <MapPin className="w-5 h-5 text-emerald-400" />
+                  <MapPin className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">
@@ -95,7 +95,7 @@ export default function Contact() {
 
               <div className="flex items-start">
                 <div className="bg-zinc-700 p-3 rounded-lg mr-4">
-                  <Mail className="w-5 h-5 text-emerald-400" />
+                  <Mail className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">{t("contact.email")}</h4>
@@ -105,7 +105,7 @@ export default function Contact() {
 
               <div className="flex items-start">
                 <div className="bg-zinc-700 p-3 rounded-lg mr-4">
-                  <Phone className="w-5 h-5 text-emerald-400" />
+                  <Phone className="w-5 h-5 text-amber-400" />
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">{t("contact.phone")}</h4>
@@ -124,7 +124,7 @@ export default function Contact() {
               {t("contact.message")}
             </h3>
             {submitSuccess ? (
-              <div className="bg-emerald-400/20 border border-emerald-400 text-emerald-400 p-4 rounded-lg">
+              <div className="bg-amber-400/20 border border-amber-400 text-amber-400 p-4 rounded-lg">
                 {t("contact.success")}
               </div>
             ) : (
@@ -180,7 +180,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-emerald-500 hover:bg-emerald-600 text-white w-full"
+                  className="bg-amber-500 hover:bg-amber-600 text-white w-full"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center">

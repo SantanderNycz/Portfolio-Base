@@ -1,42 +1,42 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "react-intersection-observer"
-import { useLanguage } from "@/contexts/language-context"
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useLanguage } from "@/contexts/language-context";
 
 interface Skill {
-  name: string
-  level: number
-  category: "frontend" | "backend" | "tools"
+  name: string;
+  level: number;
+  category: "frontend" | "backend" | "tools";
 }
 
 export default function Skills() {
-  const { t } = useLanguage()
+  const { t } = useLanguage();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
-  })
+  });
 
   const skills: Skill[] = [
     { name: "HTML/CSS", level: 90, category: "frontend" },
-    { name: "JavaScript", level: 85, category: "frontend" },
-    { name: "React", level: 80, category: "frontend" },
-    { name: "TypeScript", level: 75, category: "frontend" },
-    { name: "Tailwind CSS", level: 85, category: "frontend" },
-    { name: "Node.js", level: 80, category: "backend" },
-    { name: "Express", level: 75, category: "backend" },
-    { name: "MongoDB", level: 70, category: "backend" },
-    { name: "PostgreSQL", level: 65, category: "backend" },
+    { name: "JavaScript", level: 75, category: "frontend" },
+    { name: "React", level: 50, category: "frontend" },
+    { name: "TypeScript", level: 45, category: "frontend" },
+    { name: "Tailwind CSS", level: 65, category: "frontend" },
+    { name: "C", level: 75, category: "backend" },
+    { name: "Python", level: 45, category: "backend" },
+    { name: "Node.js", level: 30, category: "backend" },
+    { name: "MySQL", level: 25, category: "backend" },
     { name: "Git", level: 85, category: "tools" },
-    { name: "Docker", level: 60, category: "tools" },
-    { name: "AWS", level: 55, category: "tools" },
-  ]
+    { name: "ShellScript", level: 65, category: "tools" },
+    { name: "Figma", level: 50, category: "tools" },
+  ];
 
   const categories = [
     { id: "frontend", name: t("skills.frontend") },
     { id: "backend", name: t("skills.backend") },
     { id: "tools", name: t("skills.tools") },
-  ]
+  ];
 
   const container = {
     hidden: { opacity: 0 },
@@ -46,12 +46,12 @@ export default function Skills() {
         staggerChildren: 0.1,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, x: -20 },
     show: { opacity: 1, x: 0, transition: { duration: 0.5 } },
-  }
+  };
 
   return (
     <section id="skills" className="py-20 bg-zinc-900">
@@ -63,15 +63,21 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">{t("skills.title")}</h2>
-          <div className="w-20 h-1 bg-emerald-400 mx-auto mb-6"></div>
-          <p className="text-zinc-300 max-w-2xl mx-auto">{t("skills.subtitle")}</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            {t("skills.title")}
+          </h2>
+          <div className="w-20 h-1 bg-amber-400 mx-auto mb-6"></div>
+          <p className="text-zinc-300 max-w-2xl mx-auto">
+            {t("skills.subtitle")}
+          </p>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
             <div key={category.id} className="bg-zinc-800 rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-6 text-center text-emerald-400">{category.name}</h3>
+              <h3 className="text-xl font-semibold mb-6 text-center text-amber-400">
+                {category.name}
+              </h3>
               <motion.div
                 variants={container}
                 initial="hidden"
@@ -89,9 +95,11 @@ export default function Skills() {
                       <div className="w-full bg-zinc-700 rounded-full h-2">
                         <motion.div
                           initial={{ width: 0 }}
-                          animate={inView ? { width: `${skill.level}%` } : { width: 0 }}
+                          animate={
+                            inView ? { width: `${skill.level}%` } : { width: 0 }
+                          }
                           transition={{ duration: 1, delay: 0.2 + index * 0.1 }}
-                          className="bg-emerald-400 h-2 rounded-full"
+                          className="bg-amber-400 h-2 rounded-full"
                         ></motion.div>
                       </div>
                     </motion.div>
@@ -102,5 +110,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }

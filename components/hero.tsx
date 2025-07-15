@@ -45,10 +45,10 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            {t("hero.title")} <span className="text-emerald-400">Léo!</span>
+            {t("hero.title")} <span className="text-amber-400">Léo!</span>
           </h1>
           <h2 className="text-xl md:text-2xl mb-8 text-zinc-300">
-            <span className="border-r-2 border-emerald-400 pr-1">
+            <span className="border-r-2 border-amber-400 pr-1">
               {typedText}
             </span>
           </h2>
@@ -75,7 +75,7 @@ export default function Hero() {
           </div>
 
           <a href="#about" className="inline-block animate-bounce">
-            <ArrowDown className="w-6 h-6 text-emerald-400" />
+            <ArrowDown className="w-6 h-6 text-amber-400" />
             <span className="sr-only">Scroll down</span>
           </a>
         </motion.div>

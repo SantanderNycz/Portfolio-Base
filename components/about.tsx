@@ -25,7 +25,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             {t("about.title")}
           </h2>
-          <div className="w-20 h-1 bg-emerald-400 mx-auto"></div>
+          <div className="w-20 h-1 bg-amber-500 mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -48,7 +48,7 @@ export default function About() {
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-2xl font-semibold mb-4 text-emerald-400">
+            <h3 className="text-2xl font-semibold mb-4 text-amber-400">
               {t("about.role")}
             </h3>
             <p className="text-zinc-300 mb-6">{t("about.description1")}</p>
@@ -56,29 +56,23 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4 text-zinc-300">
               <div>
                 <p>
-                  <strong className="text-emerald-400">
-                    {t("about.name")}
-                  </strong>{" "}
+                  <strong className="text-amber-400">{t("about.name")}</strong>{" "}
                   Leo Santander Nycz
                 </p>
                 <p>
-                  <strong className="text-emerald-400">
-                    {t("about.email")}
-                  </strong>{" "}
+                  <strong className="text-amber-400">{t("about.email")}</strong>{" "}
                   santandernycz.ls@gmail.com
                 </p>
               </div>
               <div>
                 <p>
-                  <strong className="text-emerald-400">
+                  <strong className="text-amber-400">
                     {t("about.location")}
                   </strong>{" "}
                   Porto - Portugal
                 </p>
                 <p>
-                  <strong className="text-emerald-400">
-                    {t("about.phone")}
-                  </strong>{" "}
+                  <strong className="text-amber-400">{t("about.phone")}</strong>{" "}
                   +351 915 619 867
                 </p>
               </div>

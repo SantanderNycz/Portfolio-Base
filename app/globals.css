@@ -24,7 +24,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-emerald-500;
+  @apply bg-amber-500;
 }
 
 @layer utilities {

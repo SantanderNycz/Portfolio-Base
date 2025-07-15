@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import { useLanguage } from "@/contexts/language-context"
-import { Button } from "@/components/ui/button"
+import { useLanguage } from "@/contexts/language-context";
+import { Button } from "@/components/ui/button";
 
 export default function LanguageSwitcher() {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage } = useLanguage();
 
   return (
     <div className="flex items-center space-x-2">
@@ -13,7 +13,9 @@ export default function LanguageSwitcher() {
         size="sm"
         onClick={() => setLanguage("en")}
         className={`${
-          language === "en" ? "bg-emerald-500 hover:bg-emerald-600" : "text-zinc-300 hover:text-emerald-400"
+          language === "en"
+            ? "bg-amber-500 hover:bg-amber-600"
+            : "text-zinc-300 hover:text-amber-400"
         } px-3 py-1 h-8`}
       >
         EN
@@ -23,11 +25,13 @@ export default function LanguageSwitcher() {
         size="sm"
         onClick={() => setLanguage("pt")}
         className={`${
-          language === "pt" ? "bg-emerald-500 hover:bg-emerald-600" : "text-zinc-300 hover:text-emerald-400"
+          language === "pt"
+            ? "bg-amber-500 hover:bg-amber-600"
+            : "text-zinc-300 hover:text-amber-400"
         } px-3 py-1 h-8`}
       >
         PT
       </Button>
     </div>
-  )
+  );
 }

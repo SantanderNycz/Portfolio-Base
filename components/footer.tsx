@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <Link href="#home" className="text-xl font-bold">
-              Santander<span className="text-emerald-400">Nycz</span>
+              Santander<span className="text-amber-400">Nycz</span>
             </Link>
             <p className="text-zinc-400 mt-2">{t("hero.role")}</p>
           </div>
