@@ -30,7 +30,7 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/leonardo-santander-nycz/"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-zinc-800 hover:bg-zinc-700 p-2 rounded-full transition-colors"
