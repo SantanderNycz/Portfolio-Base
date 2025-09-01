@@ -33,7 +33,7 @@ export default function About() {
             initial={{ opacity: 0, x: -50 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative h-80 rounded-lg overflow-hidden"
+            className="relative h-[500px] rounded-lg overflow-hidden"
           >
             <Image
               src="/about.png?height=400&width=400"
@@ -53,7 +53,7 @@ export default function About() {
             </h3>
             <p className="text-zinc-300 mb-6">{t("about.description1")}</p>
             <p className="text-zinc-300 mb-6">{t("about.description2")}</p>
-            <div className="grid grid-cols-2 gap-4 text-zinc-300">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-4 text-zinc-300">
               <div>
                 <p>
                   <strong className="text-amber-400">{t("about.name")}</strong>{" "}
