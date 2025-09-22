@@ -124,9 +124,21 @@ export default function Projects() {
               ? "A guessing game in which you have to get the chosen number right and which counts the number of attempts to make it competitive."
               : "Um jogo de adivinhação em que você precisa acertar o número escolhido e que contabiliza o número de tentativas, para torná-lo competitivo.",
           image: "/NumeroSecreto.png?height=300&width=500",
-          technologies: ["HTML", "CSS", "JavaScript", "TypeScript"],
+          technologies: ["HTML", "CSS", "JavaScript"],
           github: "https://github.com/SantanderNycz/Jogo-do-numero-secreto",
           demo: "https://secret-number-beta-project.vercel.app/",
+        },
+        {
+          id: 8,
+          name: language === "en" ? "Encryptor" : "Encriptador",
+          description:
+            language === "en"
+              ? "An encryptor that allows you to copy the encrypted text or reverse the process."
+              : "Um encriptador que você pode copiar o texto encriptado ou fazer o processo reverso.",
+          image: "/Decoder.png?height=300&width=500",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          github: "https://github.com/SantanderNycz/Decode",
+          demo: "https://decode-sand-three.vercel.app/",
         },
       ]);
       setIsLoading(false);
