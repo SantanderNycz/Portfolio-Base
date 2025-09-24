@@ -135,7 +135,7 @@ export default function Projects() {
             language === "en"
               ? "An encryptor that allows you to copy the encrypted text or reverse the process."
               : "Um encriptador que você pode copiar o texto encriptado ou fazer o processo reverso.",
-          image: "/Decoder.png?height=300&width=500",
+          image: "/decoder.png?height=300&width=500",
           technologies: ["HTML", "CSS", "JavaScript"],
           github: "https://github.com/SantanderNycz/Decode",
           demo: "https://decode-sand-three.vercel.app/",
