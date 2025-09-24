@@ -33,30 +33,6 @@ export default function Projects() {
       setProjects([
         {
           id: 1,
-          name: language === "en" ? "Fokus App" : "Aplicativo Fokus",
-          description:
-            language === "en"
-              ? "An app to manage your focus and optimize your productivity, simulating the pomodoro method."
-              : "Um app para gerenciar seu foco e otimizar a sua produtividade, simulando o método pomodoro.",
-          image: "/fokus.png?height=300&width=500",
-          technologies: ["JavaScript", "HTML", "CSS"],
-          github: "https://github.com/SantanderNycz/fokus",
-          demo: "https://fokus-xi-eight.vercel.app/",
-        },
-        {
-          id: 2,
-          name: language === "en" ? "Order App" : "Aplicativo de Orçamento",
-          description:
-            language === "en"
-              ? "A quotation application, with automatic date updating, print output and duplicate writing simultaneously for the customer's path."
-              : "Um aplicativo de orçamento, com atualização automática de data, saída para impressão e com escrita duplicada simultaneamente para via do cliente.",
-          image: "/order.png?height=300&width=500",
-          technologies: ["JavaScript", "TypeScript", "CSS"],
-          github: "https://github.com/SantanderNycz/App-Or-amento",
-          demo: "https://app-orcamento-lyart.vercel.app/",
-        },
-        {
-          id: 3,
           name: language === "en" ? "Bikcraft" : "Bikcraft",
           description:
             language === "en"
@@ -68,7 +44,19 @@ export default function Projects() {
           demo: "https://bikcraft-git-main-santandernyczs-projects.vercel.app/",
         },
         {
-          id: 4,
+          id: 2,
+          name: language === "en" ? "Fokus App" : "Aplicativo Fokus",
+          description:
+            language === "en"
+              ? "An app to manage your focus and optimize your productivity, simulating the pomodoro method."
+              : "Um app para gerenciar seu foco e otimizar a sua produtividade, simulando o método pomodoro.",
+          image: "/fokus.png?height=300&width=500",
+          technologies: ["JavaScript", "HTML", "CSS"],
+          github: "https://github.com/SantanderNycz/fokus",
+          demo: "https://fokus-xi-eight.vercel.app/",
+        },
+        {
+          id: 3,
           name: language === "en" ? "Sandlerflix" : "Sandlerflix",
           description:
             language === "en"
@@ -80,19 +68,19 @@ export default function Projects() {
           demo: "https://sandlerflix.vercel.app/",
         },
         {
-          id: 5,
-          name: language === "en" ? "Eri Pongson" : "Eri Pongson",
+          id: 4,
+          name: language === "en" ? "Order App" : "Aplicativo de Orçamento",
           description:
             language === "en"
-              ? "A pong game made with AI and using the ‘p5.js’ library, in homage to the actor Eri Johnson, who is also known for his footvolley skills."
-              : "Um jogo de pong feito com IA e utilizando a biblioteca 'p5.js', em homenagem ao ator Eri Johnson, que também é conhecido pelos dons do futevôlei.",
-          image: "/Pongson.png?height=300&width=500",
-          technologies: ["HTML", "CSS", "JavaScript"],
-          github: "https://github.com/SantanderNycz/eri-pongson",
-          demo: "https://eri-pongson.vercel.app/",
+              ? "A quotation application, with automatic date updating, print output and duplicate writing simultaneously for the customer's path."
+              : "Um aplicativo de orçamento, com atualização automática de data, saída para impressão e com escrita duplicada simultaneamente para via do cliente.",
+          image: "/order.png?height=300&width=500",
+          technologies: ["JavaScript", "TypeScript", "CSS"],
+          github: "https://github.com/SantanderNycz/App-Or-amento",
+          demo: "https://app-orcamento-lyart.vercel.app/",
         },
         {
-          id: 6,
+          id: 5,
           name: language === "en" ? "Clone do Spotify" : "Spotify Clone",
           description:
             language === "en"
@@ -102,6 +90,18 @@ export default function Projects() {
           technologies: ["HTML", "CSS", "JavaScript"],
           github: "https://github.com/SantanderNycz/spotify",
           demo: "https://spotify-clone-sandy-nine.vercel.app/",
+        },
+        {
+          id: 6,
+          name: language === "en" ? "Eri Pongson" : "Eri Pongson",
+          description:
+            language === "en"
+              ? "A pong game made with AI and using the ‘p5.js’ library, in homage to the actor Eri Johnson, who is also known for his footvolley skills."
+              : "Um jogo de pong feito com IA e utilizando a biblioteca 'p5.js', em homenagem ao ator Eri Johnson, que também é conhecido pelos dons do futevôlei.",
+          image: "/Pongson.png?height=300&width=500",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          github: "https://github.com/SantanderNycz/eri-pongson",
+          demo: "https://eri-pongson.vercel.app/",
         },
         {
           id: 7,
@@ -116,7 +116,7 @@ export default function Projects() {
           demo: "https://nlw-expert-notes-five-pi.vercel.app/",
         },
         {
-          id: 7,
+          id: 8,
           name:
             language === "en" ? "Secret Number Game" : "Jogo do Número Secreto",
           description:
@@ -129,7 +129,7 @@ export default function Projects() {
           demo: "https://secret-number-beta-project.vercel.app/",
         },
         {
-          id: 8,
+          id: 9,
           name: language === "en" ? "Encryptor" : "Encriptador",
           description:
             language === "en"
