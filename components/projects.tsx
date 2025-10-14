@@ -69,6 +69,18 @@ export default function Projects() {
         },
         {
           id: 4,
+          name: language === "en" ? "Green Loop" : "Green Loop",
+          description:
+            language === "en"
+              ? "A project presented at the 'The Retail Hack' hackathon, organized by the Sonae Group, Google and other collaborators, aimed at presenting a solution for food waste. The idea was an app/website to identify markets with products close to their expiration date, indicating the location and offering discounts, so that customers could save money and everyone could avoid waste.                      "
+              : "Um projeto apresentado no hackaton 'The Retail Hack', ministrado pelo Grupo Sonae, Google e outros colaboradores, visando apresentar uma solução para o desperdício alimentício. A idéia foi um app/site para identificar mercados com produtos próximo do vencimento, indicando o local e oferecendo desconto, para que o cliente poupe dinheiro e para que todos evitem o desperdício. ",
+          image: "/order.png?height=300&width=500",
+          technologies: ["JavaScript", "TypeScript", "CSS", "HTML"],
+          github: "https://github.com/SantanderNycz/GreenLoop",
+          demo: "https://green-loop-six.vercel.app/",
+        },
+        {
+          id: 5,
           name: language === "en" ? "Order App" : "Aplicativo de Orçamento",
           description:
             language === "en"
@@ -76,11 +88,11 @@ export default function Projects() {
               : "Um aplicativo de orçamento, com atualização automática de data, saída para impressão e com escrita duplicada simultaneamente para via do cliente.",
           image: "/order.png?height=300&width=500",
           technologies: ["JavaScript", "TypeScript", "CSS"],
-          github: "https://github.com/SantanderNycz/App-Or-amento",
+          github: "https://github.com/SantanderNycz/App-Orcamento",
           demo: "https://app-orcamento-lyart.vercel.app/",
         },
         {
-          id: 5,
+          id: 6,
           name: language === "en" ? "Clone do Spotify" : "Spotify Clone",
           description:
             language === "en"
@@ -92,7 +104,7 @@ export default function Projects() {
           demo: "https://spotify-clone-sandy-nine.vercel.app/",
         },
         {
-          id: 6,
+          id: 7,
           name: language === "en" ? "Eri Pongson" : "Eri Pongson",
           description:
             language === "en"
@@ -104,7 +116,7 @@ export default function Projects() {
           demo: "https://eri-pongson.vercel.app/",
         },
         {
-          id: 7,
+          id: 8,
           name: language === "en" ? "Expert Notes" : "Bloco de notas",
           description:
             language === "en"
@@ -116,7 +128,7 @@ export default function Projects() {
           demo: "https://nlw-expert-notes-five-pi.vercel.app/",
         },
         {
-          id: 8,
+          id: 9,
           name:
             language === "en" ? "Secret Number Game" : "Jogo do Número Secreto",
           description:
@@ -129,7 +141,7 @@ export default function Projects() {
           demo: "https://secret-number-beta-project.vercel.app/",
         },
         {
-          id: 9,
+          id: 10,
           name: language === "en" ? "Encryptor" : "Encriptador",
           description:
             language === "en"
