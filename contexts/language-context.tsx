@@ -73,6 +73,7 @@ const translations = {
     "contact.send": "Send Message",
     "contact.success":
       "Thank you for your message! I'll get back to you as soon as possible.",
+    "contact.download_cv": "Download CV",
 
     // Footer
     "footer.rights": "All rights reserved.",
@@ -133,6 +134,7 @@ const translations = {
     "contact.send": "Enviar Mensagem",
     "contact.success":
       "Obrigado pela sua mensagem! Entrarei em contato o mais breve possível.",
+    "contact.download_cv": "Baixar CV",
 
     // Footer
     "footer.rights": "Todos os direitos reservados.",

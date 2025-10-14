@@ -10,9 +10,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/contexts/language-context";
+import { Download } from "lucide-react";
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const cvFile = language === "en" ? "/CV - EN.pdf" : "/CV - PT.pdf";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,15 +42,29 @@ export default function Contact() {
     setIsSubmitting(true);
     setSubmitError("");
 
-    // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitSuccess(true);
-      setFormData({ name: "", email: "", subject: "", message: "" });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "8d3ebfb2-eb57-400b-b85f-f8955d9fde29",
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitSuccess(true);
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setSubmitError("Erro ao enviar. Tenta novamente mais tarde.");
+      }
     } catch (error) {
-      setSubmitError(
-        "There was an error sending your message. Please try again."
-      );
+      setSubmitError("Erro de conexão. Verifica tua internet.");
     } finally {
       setIsSubmitting(false);
     }
@@ -111,6 +127,15 @@ export default function Contact() {
                   <h4 className="text-lg font-medium">{t("contact.phone")}</h4>
                   <p className="text-zinc-400">+351 915619867</p>
                 </div>
+              </div>
+              {/* Botão de Download do CV */}
+              <div className="mt-8">
+                <a href={cvFile} download>
+                  <Button className="bg-amber-500 hover:bg-amber-600 text-white w-full flex items-center justify-center gap-2">
+                    <Download className="w-4 h-4" />
+                    {t("contact.download_cv")}
+                  </Button>
+                </a>
               </div>
             </div>
           </motion.div>
