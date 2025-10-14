@@ -74,7 +74,7 @@ export default function Projects() {
             language === "en"
               ? "A project presented at the 'The Retail Hack' hackathon, organized by the Sonae Group, Google and other collaborators, aimed at presenting a solution for food waste. The idea was an app/website to identify markets with products close to their expiration date, indicating the location and offering discounts, so that customers could save money and everyone could avoid waste.                      "
               : "Um projeto apresentado no hackaton 'The Retail Hack', ministrado pelo Grupo Sonae, Google e outros colaboradores, visando apresentar uma solução para o desperdício alimentício. A idéia foi um app/site para identificar mercados com produtos próximo do vencimento, indicando o local e oferecendo desconto, para que o cliente poupe dinheiro e para que todos evitem o desperdício. ",
-          image: "/order.png?height=300&width=500",
+          image: "/greenloop.png?height=300&width=500",
           technologies: ["JavaScript", "TypeScript", "CSS", "HTML"],
           github: "https://github.com/SantanderNycz/GreenLoop",
           demo: "https://green-loop-six.vercel.app/",
