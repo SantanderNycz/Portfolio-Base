@@ -84,8 +84,8 @@ export default function Projects() {
           name: language === "en" ? "Order App" : "Aplicativo de Orçamento",
           description:
             language === "en"
-              ? "A quotation application, with automatic date updating, print output and duplicate writing simultaneously for the customer's path."
-              : "Um aplicativo de orçamento, com atualização automática de data, saída para impressão e com escrita duplicada simultaneamente para via do cliente.",
+              ? "A quotation application designed for Stock Som e Stock Music stores, with automatic date updating, print output and duplicate writing simultaneously for the customer's path."
+              : "Um aplicativo de orçamento feito para as lojas Stock Som e Stock Music, com atualização automática de data, saída para impressão e com escrita duplicada simultaneamente para via do cliente.",
           image: "/order.png?height=300&width=500",
           technologies: ["JavaScript", "TypeScript", "CSS"],
           github: "https://github.com/SantanderNycz/App-Orcamento",
