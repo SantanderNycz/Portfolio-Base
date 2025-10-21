@@ -42,9 +42,13 @@ export function ProjectCard({
             Try Demo
           </Link>
         </Button>
-        <Button asChild variant="outline">
+        <Button
+          asChild
+          variant="outline"
+          className="bg-stone-200 hover:bg-zinc-300"
+        >
           <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-            <ExternalLink className="w-4 h-4" />
+            <img src="/github.png" alt="GitHub" className="w-6 h-6" />
           </a>
         </Button>
       </CardFooter>
