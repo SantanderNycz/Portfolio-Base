@@ -64,14 +64,14 @@ export default function ProjectsPage() {
           ))}
         </div>
 
-        <div className="pt-8">
+        {/* <div className="pt-8">
           <button
             onClick={() => router.back()}
             className="px-4 py-2 bg-gray-200 text-black rounded hover:bg-gray-300 font-medium"
           >
             Back
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );
