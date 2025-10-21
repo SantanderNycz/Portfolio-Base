@@ -155,13 +155,13 @@ export default function Projects() {
         },
         {
           id: 11,
-          name: language === "en" ? "Encryptor" : "Encriptador",
+          name: language === "en" ? "42 Porto" : "42 Porto",
           description:
             language === "en"
-              ? "An encryptor that allows you to copy the encrypted text or reverse the process."
-              : "Um encriptador que você pode copiar o texto encriptado ou fazer o processo reverso.",
+              ? "Projects carried out during Common Core at School 42 Porto."
+              : "Projetos feitos durante o Common Core da escola 42 Porto.",
           image: "/42.png?height=300&width=500",
-          technologies: ["HTML", "CSS", "JavaScript"],
+          technologies: ["C"],
           github: "https://github.com/SantanderNycz/42CommonCore",
           demo: "/app/projetos-42",
         },
