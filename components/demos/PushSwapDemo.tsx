@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Card,
   CardContent,
@@ -13,6 +14,7 @@ import { Label } from "@/components/ui/label";
 import { RotateCcw } from "lucide-react";
 
 export default function PushSwapDemo() {
+  const router = useRouter();
   const [stackA, setStackA] = useState<number[]>([3, 2, 5, 1, 4]);
   const [stackB, setStackB] = useState<number[]>([]);
   const [operations, setOperations] = useState<string[]>([]);
@@ -50,7 +52,7 @@ export default function PushSwapDemo() {
 
   const pb = () => {
     if (stackA.length > 0) {
-      setStackB([stackA[0], ...stackB]);
+      setStackB([stackA[0], ...stackA]);
       setStackA(stackA.slice(1));
       addOperation("pb");
     }
@@ -97,14 +99,22 @@ export default function PushSwapDemo() {
 
   return (
     <div className="min-h-screen bg-background p-8">
-      <div className="container mx-auto max-w-4xl">
+      <div className="container mx-auto max-w-4xl space-y-4">
+        {/* Botão Back */}
+        <Button variant="outline" onClick={() => router.back()}>
+          Back
+        </Button>
+
         <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
           <CardHeader>
             <CardTitle className="font-mono">push_swap Visualizer</CardTitle>
             <CardDescription>
-              Sort numbers using two stacks and limited operations
+              Visualizes sorting numbers using two stacks and a limited set of
+              operations. Use the buttons below to manipulate the stacks and
+              observe how the algorithm works step by step.
             </CardDescription>
           </CardHeader>
+
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
@@ -249,6 +259,31 @@ export default function PushSwapDemo() {
             )}
           </CardContent>
         </Card>
+        <div className="mt-8 p-6 bg-muted/50 rounded-lg">
+          <h2 className="text-xl font-bold mb-3">About the Project</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            The push_swap project is an algorithm challenge that requires
+            sorting data using two stacks with a limited set of operations. The
+            operations include swap (sa, sb), push (pa, pb), rotate (ra, rb),
+            and reverse rotate (rra, rrb). The challenge is to find an efficient
+            algorithm that minimizes the number of operations needed to sort the
+            stack.
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              C
+            </span>
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              Algorithms
+            </span>
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              Sorting
+            </span>
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              Optimization
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

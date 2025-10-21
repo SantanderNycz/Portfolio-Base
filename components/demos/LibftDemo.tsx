@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import {
   Card,
   CardContent,
@@ -17,8 +18,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
 
 export default function LibftDemo() {
+  const router = useRouter();
   const [input, setInput] = useState("Hello 42!");
   const [selectedFunction, setSelectedFunction] = useState("ft_strlen");
   const [output, setOutput] = useState("");
@@ -68,14 +71,21 @@ export default function LibftDemo() {
 
   return (
     <div className="min-h-screen bg-background p-8">
-      <div className="container mx-auto max-w-2xl">
+      <div className="container mx-auto max-w-2xl space-y-4">
+        <Button variant="outline" onClick={() => router.back()}>
+          Back
+        </Button>
+
         <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle className="font-mono">libft Function Tester</CardTitle>
+            <CardTitle className="font-mono">LIBFT - Function Tester</CardTitle>
             <CardDescription>
-              Test various libft functions with custom input
+              Test various libft functions with custom input. Enter text or
+              numbers to see the results of string manipulations and character
+              checks.
             </CardDescription>
           </CardHeader>
+
           <CardContent className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="function-select">Select Function</Label>
@@ -116,6 +126,28 @@ export default function LibftDemo() {
             </div>
           </CardContent>
         </Card>
+
+        <div className="mt-8 p-6 bg-muted/50 rounded-lg">
+          <h2 className="text-xl font-bold mb-3">About the Project</h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            The libft project involves creating a library of useful C functions
+            that will be used throughout the 42 curriculum. It includes
+            functions for string manipulation (ft_strlen, ft_strcpy), memory
+            operations (ft_memcpy, ft_memset), character checks (ft_isalpha,
+            ft_isdigit), and more advanced utilities.
+          </p>
+          <div className="flex gap-2 flex-wrap">
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              C
+            </span>
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              Makefile
+            </span>
+            <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm font-mono">
+              Memory Management
+            </span>
+          </div>
+        </div>
       </div>
     </div>
   );

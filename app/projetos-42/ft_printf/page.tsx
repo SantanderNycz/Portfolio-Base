@@ -10,12 +10,12 @@ export default function FtPrintfPage() {
     <div className="min-h-screen p-8 space-y-4">
       <FtPrintfDemo />
 
-      <button
+      {/* <button
         onClick={() => router.back()}
         className="px-4 py-2 bg-gray-200 rounded hover:bg-gray-400 text-black font-medium"
       >
         Back
-      </button>
+      </button> */}
     </div>
   );
 }
