@@ -44,20 +44,9 @@ export default function Projects() {
           github: "https://github.com/SantanderNycz/bikcraft",
           demo: "https://bikcraft-git-main-santandernyczs-projects.vercel.app/",
         },
+
         {
           id: 2,
-          name: language === "en" ? "Fokus App" : "Aplicativo Fokus",
-          description:
-            language === "en"
-              ? "An app to manage your focus and optimize your productivity, simulating the pomodoro method."
-              : "Um app para gerenciar seu foco e otimizar a sua produtividade, simulando o método pomodoro.",
-          image: "/fokus.png?height=300&width=500",
-          technologies: ["JavaScript", "HTML", "CSS"],
-          github: "https://github.com/SantanderNycz/fokus",
-          demo: "https://fokus-xi-eight.vercel.app/",
-        },
-        {
-          id: 3,
           name: language === "en" ? "Sandlerflix" : "Sandlerflix",
           description:
             language === "en"
@@ -69,19 +58,19 @@ export default function Projects() {
           demo: "https://sandlerflix.vercel.app/",
         },
         {
-          id: 4,
-          name: language === "en" ? "Green Loop" : "Green Loop",
+          id: 3,
+          name: language === "en" ? "42 Porto" : "42 Porto",
           description:
             language === "en"
-              ? "A project presented at the 'The Retail Hack' hackathon, organized by the Sonae Group, Google and other collaborators, aimed at presenting a solution for food waste. The idea was an app/website to identify markets with products close to their expiration date, indicating the location and offering discounts, so that customers could save money and everyone could avoid waste.                      "
-              : "Um projeto apresentado no hackaton 'The Retail Hack', ministrado pelo Grupo Sonae, Google e outros colaboradores, visando apresentar uma solução para o desperdício alimentício. A idéia foi um app/site para identificar mercados com produtos próximo do vencimento, indicando o local e oferecendo desconto, para que o cliente poupe dinheiro e para que todos evitem o desperdício. ",
-          image: "/greenloop.png?height=300&width=500",
-          technologies: ["JavaScript", "TypeScript", "CSS", "HTML"],
-          github: "https://github.com/SantanderNycz/GreenLoop",
-          demo: "https://green-loop-six.vercel.app/",
+              ? "Projects carried out during Common Core at School 42 Porto."
+              : "Projetos feitos durante o Common Core da escola 42 Porto.",
+          image: "/42.png?height=300&width=500",
+          technologies: ["C"],
+          github: "https://github.com/SantanderNycz/42CommonCore",
+          demo: "/projetos-42",
         },
         {
-          id: 5,
+          id: 4,
           name: language === "en" ? "Order App" : "Aplicativo de Orçamento",
           description:
             language === "en"
@@ -93,7 +82,7 @@ export default function Projects() {
           demo: "https://app-orcamento-lyart.vercel.app/",
         },
         {
-          id: 6,
+          id: 5,
           name: language === "en" ? "Clone do Spotify" : "Spotify Clone",
           description:
             language === "en"
@@ -105,7 +94,31 @@ export default function Projects() {
           demo: "https://spotify-clone-sandy-nine.vercel.app/",
         },
         {
+          id: 6,
+          name: language === "en" ? "Fokus App" : "Aplicativo Fokus",
+          description:
+            language === "en"
+              ? "An app to manage your focus and optimize your productivity, simulating the pomodoro method."
+              : "Um app para gerenciar seu foco e otimizar a sua produtividade, simulando o método pomodoro.",
+          image: "/fokus.png?height=300&width=500",
+          technologies: ["JavaScript", "HTML", "CSS"],
+          github: "https://github.com/SantanderNycz/fokus",
+          demo: "https://fokus-xi-eight.vercel.app/",
+        },
+        {
           id: 7,
+          name: language === "en" ? "Green Loop" : "Green Loop",
+          description:
+            language === "en"
+              ? "A project presented at the 'The Retail Hack' hackathon, organized by the Sonae Group, Google and other collaborators, aimed at presenting a solution for food waste. The idea was an app/website to identify markets with products close to their expiration date, indicating the location and offering discounts, so that customers could save money and everyone could avoid waste.                      "
+              : "Um projeto apresentado no hackaton 'The Retail Hack', ministrado pelo Grupo Sonae, Google e outros colaboradores, visando apresentar uma solução para o desperdício alimentício. A idéia foi um app/site para identificar mercados com produtos próximo do vencimento, indicando o local e oferecendo desconto, para que o cliente poupe dinheiro e para que todos evitem o desperdício. ",
+          image: "/greenloop.png?height=300&width=500",
+          technologies: ["JavaScript", "TypeScript", "CSS", "HTML"],
+          github: "https://github.com/SantanderNycz/GreenLoop",
+          demo: "https://green-loop-six.vercel.app/",
+        },
+        {
+          id: 8,
           name: language === "en" ? "Eri Pongson" : "Eri Pongson",
           description:
             language === "en"
@@ -117,7 +130,7 @@ export default function Projects() {
           demo: "https://eri-pongson.vercel.app/",
         },
         {
-          id: 8,
+          id: 9,
           name: language === "en" ? "Expert Notes" : "Bloco de notas",
           description:
             language === "en"
@@ -129,7 +142,7 @@ export default function Projects() {
           demo: "https://nlw-expert-notes-five-pi.vercel.app/",
         },
         {
-          id: 9,
+          id: 10,
           name:
             language === "en" ? "Secret Number Game" : "Jogo do Número Secreto",
           description:
@@ -142,7 +155,7 @@ export default function Projects() {
           demo: "https://secret-number-beta-project.vercel.app/",
         },
         {
-          id: 10,
+          id: 11,
           name: language === "en" ? "Encryptor" : "Encriptador",
           description:
             language === "en"
@@ -152,18 +165,6 @@ export default function Projects() {
           technologies: ["HTML", "CSS", "JavaScript"],
           github: "https://github.com/SantanderNycz/Decode",
           demo: "https://decode-sand-three.vercel.app/",
-        },
-        {
-          id: 11,
-          name: language === "en" ? "42 Porto" : "42 Porto",
-          description:
-            language === "en"
-              ? "Projects carried out during Common Core at School 42 Porto."
-              : "Projetos feitos durante o Common Core da escola 42 Porto.",
-          image: "/42.png?height=300&width=500",
-          technologies: ["C"],
-          github: "https://github.com/SantanderNycz/42CommonCore",
-          demo: "/projetos-42",
         },
       ]);
       setIsLoading(false);
