@@ -52,7 +52,7 @@ export default function PushSwapDemo() {
 
   const pb = () => {
     if (stackA.length > 0) {
-      setStackB([stackA[0], ...stackA]);
+      setStackB([stackA[0], ...stackB]);
       setStackA(stackA.slice(1));
       addOperation("pb");
     }
