@@ -27,7 +27,7 @@ export function ProjectCard({
       <CardHeader>
         <div className="flex items-start justify-between gap-2 mb-2">
           <CardTitle className="text-xl font-mono">{title}</CardTitle>
-          <span className="px-2 py-1 text-xs font-mono bg-accent/20 text-accent rounded">
+          <span className="px-2 py-1 text-xs font-mono bg-green-400/20 text-green-600 rounded">
             C
           </span>
         </div>
