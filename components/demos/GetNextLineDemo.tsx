@@ -1,38 +1,44 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
-import { RotateCcw } from "lucide-react"
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { RotateCcw } from "lucide-react";
 
 export function GetNextLineDemo() {
   const defaultText = `Welcome to get_next_line demo!
 This function reads one line at a time.
 It handles multiple file descriptors.
 Perfect for parsing files line by line.
-Try clicking "Read Next Line" below!`
+Try clicking "Read Next Line" below!`;
 
-  const [fileContent] = useState(defaultText)
-  const [currentLine, setCurrentLine] = useState(0)
-  const [displayedLine, setDisplayedLine] = useState("")
+  const [fileContent] = useState(defaultText);
+  const [currentLine, setCurrentLine] = useState(0);
+  const [displayedLine, setDisplayedLine] = useState("");
 
-  const lines = fileContent.split("\n")
+  const lines = fileContent.split("\n");
 
   const readNextLine = () => {
     if (currentLine < lines.length) {
-      setDisplayedLine(lines[currentLine])
-      setCurrentLine(currentLine + 1)
+      setDisplayedLine(lines[currentLine]);
+      setCurrentLine(currentLine + 1);
     } else {
-      setDisplayedLine("EOF (End of File)")
+      setDisplayedLine("EOF (End of File)");
     }
-  }
+  };
 
   const reset = () => {
-    setCurrentLine(0)
-    setDisplayedLine("")
-  }
+    setCurrentLine(0);
+    setDisplayedLine("");
+  };
 
   return (
     <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
@@ -43,7 +49,11 @@ Try clicking "Read Next Line" below!`
       <CardContent className="space-y-4">
         <div className="space-y-2">
           <Label>File Content (read-only)</Label>
-          <Textarea value={fileContent} readOnly className="font-mono text-sm resize-none h-32 bg-muted" />
+          <Textarea
+            value={fileContent}
+            readOnly
+            className="font-mono text-sm resize-none h-32 bg-muted"
+          />
         </div>
 
         <div className="flex gap-2">
@@ -64,5 +74,5 @@ Try clicking "Read Next Line" below!`
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

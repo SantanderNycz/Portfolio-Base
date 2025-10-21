@@ -1,37 +1,50 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 
 export function FtPrintfDemo() {
-  const [formatString, setFormatString] = useState("Hello %s, you have %d new messages!")
-  const [stringArg, setStringArg] = useState("User")
-  const [numberArg, setNumberArg] = useState("42")
-  const [output, setOutput] = useState("")
+  const [formatString, setFormatString] = useState(
+    "Hello %s, you have %d new messages!"
+  );
+  const [stringArg, setStringArg] = useState("User");
+  const [numberArg, setNumberArg] = useState("42");
+  const [output, setOutput] = useState("");
 
   const executeFormat = () => {
-    let result = formatString
+    let result = formatString;
 
     // Simple implementation of format string replacement
-    result = result.replace("%s", stringArg)
-    result = result.replace("%d", numberArg)
-    result = result.replace("%i", numberArg)
-    result = result.replace("%c", stringArg.charAt(0))
-    result = result.replace("%x", Number.parseInt(numberArg).toString(16))
-    result = result.replace("%X", Number.parseInt(numberArg).toString(16).toUpperCase())
-    result = result.replace("%%", "%")
+    result = result.replace("%s", stringArg);
+    result = result.replace("%d", numberArg);
+    result = result.replace("%i", numberArg);
+    result = result.replace("%c", stringArg.charAt(0));
+    result = result.replace("%x", Number.parseInt(numberArg).toString(16));
+    result = result.replace(
+      "%X",
+      Number.parseInt(numberArg).toString(16).toUpperCase()
+    );
+    result = result.replace("%%", "%");
 
-    setOutput(result)
-  }
+    setOutput(result);
+  };
 
   return (
     <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="font-mono">ft_printf Formatter</CardTitle>
-        <CardDescription>Test printf-style format strings with various specifiers</CardDescription>
+        <CardDescription>
+          Test printf-style format strings with various specifiers
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
@@ -44,7 +57,8 @@ export function FtPrintfDemo() {
             className="font-mono"
           />
           <p className="text-xs text-muted-foreground">
-            Supported: %s (string), %d/%i (integer), %c (char), %x/%X (hex), %% (percent)
+            Supported: %s (string), %d/%i (integer), %c (char), %x/%X (hex), %%
+            (percent)
           </p>
         </div>
 
@@ -85,5 +99,5 @@ export function FtPrintfDemo() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

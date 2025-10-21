@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
 interface Project {
@@ -162,7 +163,7 @@ export default function Projects() {
           image: "/42.png?height=300&width=500",
           technologies: ["HTML", "CSS", "JavaScript"],
           github: "https://github.com/SantanderNycz/42CommonCore",
-          demo: "",
+          demo: "/app/projetos-42",
         },
       ]);
       setIsLoading(false);

@@ -1,56 +1,78 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export function LibftDemo() {
-  const [input, setInput] = useState("Hello 42!")
-  const [selectedFunction, setSelectedFunction] = useState("ft_strlen")
-  const [output, setOutput] = useState("")
+  const [input, setInput] = useState("Hello 42!");
+  const [selectedFunction, setSelectedFunction] = useState("ft_strlen");
+  const [output, setOutput] = useState("");
 
   const executeFunction = (func: string, value: string) => {
     switch (func) {
       case "ft_strlen":
-        setOutput(`Length: ${value.length}`)
-        break
+        setOutput(`Length: ${value.length}`);
+        break;
       case "ft_toupper":
-        setOutput(value.toUpperCase())
-        break
+        setOutput(value.toUpperCase());
+        break;
       case "ft_tolower":
-        setOutput(value.toLowerCase())
-        break
+        setOutput(value.toLowerCase());
+        break;
       case "ft_isalpha":
-        setOutput(value ? `${/^[a-zA-Z]+$/.test(value) ? "True" : "False"} (all alphabetic)` : "False")
-        break
+        setOutput(
+          value
+            ? `${/^[a-zA-Z]+$/.test(value) ? "True" : "False"} (all alphabetic)`
+            : "False"
+        );
+        break;
       case "ft_isdigit":
-        setOutput(value ? `${/^\d+$/.test(value) ? "True" : "False"} (all digits)` : "False")
-        break
+        setOutput(
+          value
+            ? `${/^\d+$/.test(value) ? "True" : "False"} (all digits)`
+            : "False"
+        );
+        break;
       case "ft_strrev":
-        setOutput(value.split("").reverse().join(""))
-        break
+        setOutput(value.split("").reverse().join(""));
+        break;
       default:
-        setOutput("")
+        setOutput("");
     }
-  }
+  };
 
   const handleFunctionChange = (func: string) => {
-    setSelectedFunction(func)
-    executeFunction(func, input)
-  }
+    setSelectedFunction(func);
+    executeFunction(func, input);
+  };
 
   const handleInputChange = (value: string) => {
-    setInput(value)
-    executeFunction(selectedFunction, value)
-  }
+    setInput(value);
+    executeFunction(selectedFunction, value);
+  };
 
   return (
     <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
       <CardHeader>
         <CardTitle className="font-mono">libft Function Tester</CardTitle>
-        <CardDescription>Test various libft functions with custom input</CardDescription>
+        <CardDescription>
+          Test various libft functions with custom input
+        </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">
@@ -89,5 +111,5 @@ export function LibftDemo() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }
