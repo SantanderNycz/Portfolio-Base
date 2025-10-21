@@ -163,7 +163,7 @@ export default function Projects() {
           image: "/42.png?height=300&width=500",
           technologies: ["C"],
           github: "https://github.com/SantanderNycz/42CommonCore",
-          demo: "/app/projetos-42",
+          demo: "/projetos-42",
         },
       ]);
       setIsLoading(false);

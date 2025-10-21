@@ -5,28 +5,28 @@ const projects = [
     title: "libft",
     description:
       "A custom C library implementing standard functions like strlen, strcpy, memcpy, and more. Foundation for all 42 projects.",
-    demoPath: "/projects/libft",
+    demoPath: "/projetos-42/libft",
     githubUrl: "https://github.com/yourusername/libft",
   },
   {
     title: "get_next_line",
     description:
       "A function that reads a line from a file descriptor. Handles multiple file descriptors and buffer management.",
-    demoPath: "/projects/get_next_line",
+    demoPath: "/projetos-42/get_next_line",
     githubUrl: "https://github.com/yourusername/get_next_line",
   },
   {
     title: "ft_printf",
     description:
       "Recreation of the printf function with support for multiple format specifiers (%s, %d, %x, %p, etc.).",
-    demoPath: "/projects/ft_printf",
+    demoPath: "/projetos-42/ft_printf",
     githubUrl: "https://github.com/yourusername/ft_printf",
   },
   {
     title: "push_swap",
     description:
       "A sorting algorithm using two stacks and a limited set of operations. Optimizes for minimum number of moves.",
-    demoPath: "/projects/push_swap",
+    demoPath: "/projetos-42/push_swap",
     githubUrl: "https://github.com/yourusername/push_swap",
   },
 ];
