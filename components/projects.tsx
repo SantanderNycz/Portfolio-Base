@@ -152,6 +152,18 @@ export default function Projects() {
           github: "https://github.com/SantanderNycz/Decode",
           demo: "https://decode-sand-three.vercel.app/",
         },
+        {
+          id: 11,
+          name: language === "en" ? "Encryptor" : "Encriptador",
+          description:
+            language === "en"
+              ? "An encryptor that allows you to copy the encrypted text or reverse the process."
+              : "Um encriptador que você pode copiar o texto encriptado ou fazer o processo reverso.",
+          image: "/42.png?height=300&width=500",
+          technologies: ["HTML", "CSS", "JavaScript"],
+          github: "https://github.com/SantanderNycz/42CommonCore",
+          demo: "",
+        },
       ]);
       setIsLoading(false);
     }, 1000);
