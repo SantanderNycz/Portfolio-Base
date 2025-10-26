@@ -119,14 +119,14 @@ export default function Projects() {
         },
         {
           id: 8,
-          name: language === "en" ? "Eri Pongson" : "Eri Pongson",
+          name: language === "en" ? "Eri Pongson - v2" : "Eri Pongson - v2",
           description:
             language === "en"
-              ? "A pong game made with AI and using the ‘p5.js’ library, in homage to the actor Eri Johnson, who is also known for his footvolley skills."
-              : "Um jogo de pong feito com IA e utilizando a biblioteca 'p5.js', em homenagem ao ator Eri Johnson, que também é conhecido pelos dons do futevôlei.",
+              ? "A Pong game with AI, initially built using the p5.js library, with the second version bringing improvements in gameplay, smoother animations, and enhanced AI. The game is inspired by the legendary actor Eri Johnson, well known for his footvolley skills."
+              : "Um jogo Pong com IA, que utilizava em sua primeira versão a biblioteca p5.js, e na sua segunda versão traz melhorias na jogabilidade, animações mais suaves e IA aprimorada. O jogo é inspirado no lendário ator Eri Johnson, muito conhecido por sua habilidades no futevôlei.",
           image: "/Pongson.png?height=300&width=500",
           technologies: ["HTML", "CSS", "JavaScript"],
-          github: "https://github.com/SantanderNycz/eri-pongson",
+          github: "https://github.com/SantanderNycz/eri-pongson-v2",
           demo: "https://eri-pongson.vercel.app/",
         },
         {
