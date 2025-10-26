@@ -127,7 +127,7 @@ export default function Projects() {
           image: "/Pongson.png?height=300&width=500",
           technologies: ["HTML", "CSS", "JavaScript"],
           github: "https://github.com/SantanderNycz/eri-pongson-v2",
-          demo: "https://eri-pongson.vercel.app/",
+          demo: "https://eri-pongson-v2.vercel.app/",
         },
         {
           id: 9,
