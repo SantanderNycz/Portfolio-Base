@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Bikcraft",
+    "description": "A modern and responsive portfolio website with dark mode support.",
+    "longDescription": "Web application developed with focus on responsiveness, accessibility, and user experience, including dark mode support, detailed project pages, JavaScript animations, and optimized structure for performance and SEO.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
+    "github": "https://github.com/SantanderNycz/bikcraft",
+    "demo": "https://bikcraft-git-main-santandernyczs-projects.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Sandlerflix",
+    "description": "A project fully dedicated to Adam Sandler.",
+    "longDescription": "Responsive frontend project dedicated exclusively to Adam Sandler's filmography, with adaptable layout for multiple devices, dynamic content organization, and focus on performance and usability.",
+    "image": "/Sandlerflix.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/sandlerflix",
+    "demo": "https://sandlerflix.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "42 Porto",
+    "description": "Projects developed during the 42 Porto Common Core.",
+    "longDescription": "Repository centralizing projects developed during 42 Porto's Common Core, covering C programming exercises, Shell Script, and logic challenges, with emphasis on low-level programming, memory management, and terminal automation.",
+    "image": "/42.png",
+    "technologies": ["C", "ShellScript"],
+    "github": "https://github.com/SantanderNycz/42CommonCore",
+    "demo": "/projetos-42"
+  },
+  {
+    "id": 4,
+    "title": "Budget App",
+    "description": "A budget app created for Stock Som and Stock Music stores, with automatic date updates and print.",
+    "longDescription": "Custom budget generation system for Stock Som and Stock Music stores, with automatic date updates, record duplication for clients, document generation for printing, and optimized commercial workflow.",
+    "image": "/order.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS"],
+    "github": "https://github.com/SantanderNycz/App-Orcamento",
+    "demo": "https://app-orcamento-lyart.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Spotify Clone",
+    "description": "Spotify interface clone using CSS and JS effects.",
+    "longDescription": "Functional clone of Spotify interface, developed for educational purposes, with responsive layout, simulated music player, dynamic interactions via JavaScript, and advanced CSS styling.",
+    "image": "/Spotify.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/spotify",
+    "demo": "https://spotify-clone-sandy-nine.vercel.app/"
+  },
+  {
+    "id": 6,
+    "title": "Fokus App",
+    "description": "An app to manage focus and optimize productivity using Pomodoro method.",
+    "longDescription": "Productivity application based on Pomodoro technique, allowing task management, focus cycles and breaks control, and daily performance tracking through timers and persistent states.",
+    "image": "/fokus.png",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "github": "https://github.com/SantanderNycz/fokus",
+    "demo": "https://fokus-xi-eight.vercel.app/"
+  },
+  {
+    "id": 7,
+    "title": "Green Loop",
+    "description": "Hackathon project 'The Retail Hack' against food waste.",
+    "longDescription": "Project developed in 'The Retail Hack' hackathon promoted by Grupo Sonae and Google, focusing on reducing food waste through identifying near-expiry products, displaying discounts, and geolocation in stores.",
+    "image": "/greenloop.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS", "HTML"],
+    "github": "https://github.com/SantanderNycz/GreenLoop",
+    "demo": "https://green-loop-six.vercel.app/"
+  },
+  {
+    "id": 8,
+    "title": "Eri Pongson - v2",
+    "description": "Pong game with AI, inspired by actor Eri Johnson, improving gameplay and animations.",
+    "longDescription": "Pong-style game developed with Artificial Intelligence to control the opponent, with significant physics improvements, smoother animations, difficulty balancing, and performance optimization in the second version.",
+    "image": "/Pongson.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/eri-pongson-v2",
+    "demo": "https://eri-pongson-v2.vercel.app/"
+  },
+  {
+    "id": 9,
+    "title": "Notes App",
+    "description": "A note-taking app with TypeScript/JS support for text or audio notes.",
+    "longDescription": "Notes management application developed in TypeScript and JavaScript, supporting text and audio records, dynamic content organization, data persistence, and intuitive productivity-oriented interface.",
+    "image": "/Notes.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/nlw-expert-notes",
+    "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
+  },
+  {
+    "id": 10,
+    "title": "Secret Number Game",
+    "description": "A guessing game that tracks the number of attempts to make it competitive.",
+    "longDescription": "Logic-based number guessing game where the system generates a secret number and counts user attempts, stimulating logical reasoning, state control, and dynamic interface interaction.",
+    "image": "/NumeroSecreto.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Jogo-do-numero-secreto",
+    "demo": "https://secret-number-beta-project.vercel.app/"
+  },
+  {
+    "id": 11,
+    "title": "Encryptor",
+    "description": "Encryptor allowing to copy encrypted text or reverse the process.",
+    "longDescription": "Text encryption and decryption application implemented in JavaScript, enabling secure message transformation, reversal of the process, automated result copying, and data integrity validation.",
+    "image": "/decoder.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Decode",
+    "demo": "https://decode-sand-three.vercel.app/"
+  }
+]

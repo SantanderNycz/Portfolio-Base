@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "Bikcraft",
+    "description": "Um site de portfólio moderno e responsivo com suporte ao modo escuro.",
+    "longDescription": "Aplicação web desenvolvida com foco em responsividade, acessibilidade e experiência do usuário, incluindo suporte a modo escuro, páginas de projetos detalhadas, animações com JavaScript e estrutura otimizada para performance e SEO.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
+    "github": "https://github.com/SantanderNycz/bikcraft",
+    "demo": "https://bikcraft-git-main-santandernyczs-projects.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Sandlerflix",
+    "description": "Um projeto focado única e totalmente no Adam Sandler.",
+    "longDescription": "Projeto frontend responsivo dedicado exclusivamente à filmografia de Adam Sandler, com layout adaptável a múltiplos dispositivos, organização dinâmica de conteúdo e foco em performance e usabilidade.",
+    "image": "/Sandlerflix.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/sandlerflix",
+    "demo": "https://sandlerflix.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "42 Porto",
+    "description": "Projetos feitos durante o Common Core da escola 42 Porto.",
+    "longDescription": "Repositório que centraliza os projetos desenvolvidos durante o Common Core da 42 Porto, abrangendo exercícios de programação em C, Shell Script e desafios de lógica, com ênfase em baixo nível, gerenciamento de memória e automação via terminal.",
+    "image": "/42.png",
+    "technologies": ["C", "ShellScript"],
+    "github": "https://github.com/SantanderNycz/42CommonCore",
+    "demo": "/projetos-42"
+  },
+  {
+    "id": 4,
+    "title": "Aplicativo de Orçamento",
+    "description": "Um aplicativo de orçamento feito para as lojas Stock Som e Stock Music, com atualização automática de data e impressão.",
+    "longDescription": "Sistema de geração de orçamentos desenvolvido sob medida para as lojas Stock Som e Stock Music, com recursos de atualização automática de datas, duplicação de registros para clientes, geração de documentos para impressão e fluxo otimizado de atendimento comercial.",
+    "image": "/order.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS"],
+    "github": "https://github.com/SantanderNycz/App-Orcamento",
+    "demo": "https://app-orcamento-lyart.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Spotify Clone",
+    "description": "Projeto de clone do Spotify, utilizando conhecimento em CSS e efeitos de JS.",
+    "longDescription": "Clone funcional da interface do Spotify, desenvolvido para fins educacionais, com layout responsivo, simulação de player de música, interações dinâmicas via JavaScript e uso avançado de estilização com CSS.",
+    "image": "/Spotify.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/spotify",
+    "demo": "https://spotify-clone-sandy-nine.vercel.app/"
+  },
+  {
+    "id": 6,
+    "title": "Aplicativo Fokus",
+    "description": "Um app para gerenciar seu foco e otimizar a sua produtividade, simulando o método pomodoro.",
+    "longDescription": "Aplicação de produtividade baseada na técnica Pomodoro, permitindo o gerenciamento de tarefas, controle de ciclos de foco e pausas, além do acompanhamento do desempenho diário por meio de timers e estados persistentes.",
+    "image": "/fokus.png",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "github": "https://github.com/SantanderNycz/fokus",
+    "demo": "https://fokus-xi-eight.vercel.app/"
+  },
+  {
+    "id": 7,
+    "title": "Green Loop",
+    "description": "Projeto do hackathon 'The Retail Hack' para soluções contra desperdício alimentício.",
+    "longDescription": "Projeto desenvolvido no hackathon 'The Retail Hack', promovido pelo Grupo Sonae e Google, com foco na redução do desperdício alimentar por meio da identificação de produtos próximos ao vencimento, exibição de descontos e geolocalização no ponto de venda.",
+    "image": "/greenloop.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS", "HTML"],
+    "github": "https://github.com/SantanderNycz/GreenLoop",
+    "demo": "https://green-loop-six.vercel.app/"
+  },
+  {
+    "id": 8,
+    "title": "Eri Pongson - v2",
+    "description": "Jogo Pong com IA, inspirado no ator Eri Johnson, melhorando jogabilidade e animações.",
+    "longDescription": "Jogo no estilo Pong desenvolvido com Inteligência Artificial para controle do oponente, contendo melhorias significativas de física, animações mais suaves, balanceamento de dificuldade e otimizações de desempenho na segunda versão do projeto.",
+    "image": "/Pongson.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/eri-pongson-v2",
+    "demo": "https://eri-pongson-v2.vercel.app/"
+  },
+  {
+    "id": 9,
+    "title": "Bloco de notas",
+    "description": "Um app de bloco de notas, baseado em TS e JS, com opção de notas em áudio ou escritas.",
+    "longDescription": "Aplicativo de gerenciamento de notas desenvolvido em TypeScript e JavaScript, com suporte a registros em texto e áudio, organização dinâmica de conteúdo, persistência de dados e interface intuitiva orientada à produtividade.",
+    "image": "/Notes.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/nlw-expert-notes",
+    "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
+  },
+  {
+    "id": 10,
+    "title": "Jogo do Número Secreto",
+    "description": "Um jogo de adivinhação que contabiliza o número de tentativas para torná-lo competitivo.",
+    "longDescription": "Jogo de lógica baseado em adivinhação numérica, no qual o sistema gera um número secreto e contabiliza o total de tentativas do usuário, estimulando raciocínio lógico, controle de estados e interação dinâmica com a interface.",
+    "image": "/NumeroSecreto.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Jogo-do-numero-secreto",
+    "demo": "https://secret-number-beta-project.vercel.app/"
+  },
+  {
+    "id": 11,
+    "title": "Encriptador",
+    "description": "Um encriptador que permite copiar o texto encriptado ou inverter o processo.",
+    "longDescription": "Aplicação de criptografia e descriptografia de textos implementada em JavaScript, permitindo a transformação segura de mensagens, reversão do processo, cópia automatizada dos resultados e validação da integridade dos dados.",
+    "image": "/decoder.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Decode",
+    "demo": "https://decode-sand-three.vercel.app/"
+  }
+]

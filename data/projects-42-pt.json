@@ -1,0 +1,38 @@
+[
+  {
+    "title": "libft",
+    "description": "Uma biblioteca C personalizada que implementa funções padrão como strlen, strcpy, memcpy e mais. Base para todos os projetos da 42.",
+    "demoPath": "/projetos-42/libft",
+    "githubUrl": "https://github.com/SantanderNycz/libft_42"
+  },
+  {
+    "title": "get_next_line",
+    "description": "Uma função que lê uma linha de um descritor de arquivo. Gerencia múltiplos descritores e buffers.",
+    "demoPath": "/projetos-42/get_next_line",
+    "githubUrl": "https://github.com/SantanderNycz/get_next_line_42"
+  },
+  {
+    "title": "ft_printf",
+    "description": "Recriação da função printf com suporte a múltiplos especificadores de formato (%s, %d, %x, %p, etc.).",
+    "demoPath": "/projetos-42/ft_printf",
+    "githubUrl": "https://github.com/SantanderNycz/ft_printf_42"
+  },
+  {
+    "title": "push_swap",
+    "description": "Algoritmo de ordenação usando duas pilhas e um conjunto limitado de operações. Otimizado para o menor número de movimentos.",
+    "demoPath": "/projetos-42/push_swap",
+    "githubUrl": "https://github.com/SantanderNycz/push_swap_42"
+  },
+  {
+    "title": "minitalk",
+    "description": "Sistema cliente-servidor usando sinais UNIX (SIGUSR1 e SIGUSR2) para transmitir mensagens em binário.",
+    "demoPath": "/projetos-42/minitalk",
+    "githubUrl": "https://github.com/SantanderNycz/minitalk_42"
+  },
+  {
+    "title": "so_long",
+    "description": "Jogo de aventura 2D desenvolvido em C com MiniLibX. Colete moedas, evite inimigos e alcance a saída!",
+    "demoPath": "/projetos-42/so_long",
+    "githubUrl": "https://github.com/SantanderNycz/so_long_42"
+  }
+]
