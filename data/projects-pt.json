@@ -41,22 +41,29 @@
   },
   {
     "id": 5,
-    "title": "Party Time",
-    "description": "PartyTime é uma aplicação para organizar e gerenciar festas e eventos de forma simples e interativa.",
-    "longDescription": "PartyTime é uma aplicação full-stack composta por front-end em React e back-end em Node.js com Express e MongoDB, permitindo cadastro de usuários, gerenciamento de eventos e integração completa entre cliente e servidor via API REST.",
-    "image": "/party-time.png",
+    "title": "BeanBase",
+    "description": "BeanBase é uma rede social para amantes de café: compartilhe suas experiências, descubra novos cafés e conecte-se com a comunidade.",
+    "longDescription": "O BeanBase é um aplicativo web full-stack desenvolvido com React, Node.js, Express e MongoDB que permite aos usuários se cadastrar, gerenciar eventos e interagir com uma API RESTful para uma comunicação cliente-servidor perfeita.",
+    "image": "/beanbase.png",
     "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
-    "github": "https://github.com/SantanderNycz/App-Orcamento",
-    "demo": "https://api-partytime-front.vercel.app/"
+    "github": "https://github.com/SantanderNycz/BeanBase",
+    "demo": "https://beanbase.up.railway.app/"
   },
   {
     "id": 6,
     "title": "Spotify Clone",
     "description": "Projeto de clone do Spotify, utilizando conhecimento em CSS e efeitos de JS.",
-    "longDescription": "Clone funcional da interface do Spotify, desenvolvido para fins educacionais, com layout responsivo, simulação de player de música, interações dinâmicas via JavaScript e uso avançado de estilização com CSS.",
+    "longDescription": "Clone funcional da interface do Spotify, desenvolvido para fins educacionais, com layout responsivo, simulação de player de música, interações dinâmicas via JavaScript e uso avançado de estilização com CSS. Otimizado posteriormente com React, Vite e TailwindCSS.",
     "image": "/Spotify.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/SantanderNycz/spotify",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Vite",
+      "TailwindCSS"
+    ],
+    "github": "https://github.com/SantanderNycz/spotify-v2",
     "demo": "https://spotify-clone-sandy-nine.vercel.app/"
   },
   {
@@ -71,6 +78,16 @@
   },
   {
     "id": 8,
+    "title": "Party Time",
+    "description": "PartyTime é uma aplicação para organizar e gerenciar festas e eventos de forma simples e interativa.",
+    "longDescription": "PartyTime é uma aplicação full-stack composta por front-end em React e back-end em Node.js com Express e MongoDB, permitindo cadastro de usuários, gerenciamento de eventos e integração completa entre cliente e servidor via API REST.",
+    "image": "/party-time.png",
+    "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
+    "github": "https://github.com/SantanderNycz/api-partytime-front",
+    "demo": "https://api-partytime-front.vercel.app/"
+  },
+  {
+    "id": 9,
     "title": "Green Loop",
     "description": "Projeto do hackathon 'The Retail Hack' para soluções contra desperdício alimentício.",
     "longDescription": "Projeto desenvolvido no hackathon 'The Retail Hack', promovido pelo Grupo Sonae e Google, com foco na redução do desperdício alimentar por meio da identificação de produtos próximos ao vencimento, exibição de descontos e geolocalização no ponto de venda.",
@@ -80,7 +97,7 @@
     "demo": "https://green-loop-six.vercel.app/"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Eri Pongson - v2",
     "description": "Jogo Pong com IA, inspirado no ator Eri Johnson, melhorando jogabilidade e animações.",
     "longDescription": "Jogo no estilo Pong desenvolvido com Inteligência Artificial para controle do oponente, contendo melhorias significativas de física, animações mais suaves, balanceamento de dificuldade e otimizações de desempenho na segunda versão do projeto.",
@@ -90,7 +107,7 @@
     "demo": "https://eri-pongson-v2.vercel.app/"
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Bloco de notas",
     "description": "Um app de bloco de notas, baseado em TS e JS, com opção de notas em áudio ou escritas.",
     "longDescription": "Aplicativo de gerenciamento de notas desenvolvido em TypeScript e JavaScript, com suporte a registros em texto e áudio, organização dinâmica de conteúdo, persistência de dados e interface intuitiva orientada à produtividade.",
@@ -100,7 +117,7 @@
     "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Jogo do Número Secreto",
     "description": "Um jogo de adivinhação que contabiliza o número de tentativas para torná-lo competitivo.",
     "longDescription": "Jogo de lógica baseado em adivinhação numérica, no qual o sistema gera um número secreto e contabiliza o total de tentativas do usuário, estimulando raciocínio lógico, controle de estados e interação dinâmica com a interface.",
@@ -110,7 +127,7 @@
     "demo": "https://secret-number-beta-project.vercel.app/"
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "Encriptador",
     "description": "Um encriptador que permite copiar o texto encriptado ou inverter o processo.",
     "longDescription": "Aplicação de criptografia e descriptografia de textos implementada em JavaScript, permitindo a transformação segura de mensagens, reversão do processo, cópia automatizada dos resultados e validação da integridade dos dados.",
