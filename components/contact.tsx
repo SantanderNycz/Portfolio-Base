@@ -1,8 +1,7 @@
 "use client";
 
-import type React from "react";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Mail, MapPin, Phone, Send, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -14,8 +13,9 @@ export default function Contact() {
   const { t, language } = useLanguage();
   const cvFile =
     language === "en"
-      ? "/CV - Leonardo Santander Nycz (EN).pdf"
-      : "/CV - Leonardo Santander Nycz (PT).pdf";
+      ? "/DEV (EN) - Leonardo Santander Nycz.pdf"
+      : "/DEV (PT) - Leonardo Santander Nycz.pdf";
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -26,13 +26,13 @@ export default function Contact() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  const [ref, inView] = useInView({
+  const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1,
+    rootMargin: "0px",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -72,10 +72,26 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-zinc-800">
+    <motion.section
+      id="contact"
+      ref={ref}
+      initial={{
+        background:
+          "linear-gradient(to bottom, rgba(24,24,27,0.4), rgba(24,24,27,0.9), rgba(24,24,27,1))",
+      }}
+      animate={
+        inView
+          ? {
+              background:
+                "linear-gradient(to bottom, rgba(24,24,27,0.0), rgba(24,24,27,0.8), rgba(24,24,27,1))",
+            }
+          : {}
+      }
+      transition={{ duration: 1.2, ease: "easeOut" }}
+      className="py-20 overflow-hidden relative z-[48]"
+    >
       <div className="container mx-auto px-4">
         <motion.div
-          ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.6 }}
@@ -89,7 +105,6 @@ export default function Contact() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
           />
           <p className="text-zinc-300 max-w-2xl mx-auto">
             {t("contact.subtitle")}
@@ -178,6 +193,7 @@ export default function Contact() {
                     <Input
                       type="text"
                       name="name"
+                      autoComplete="name"
                       placeholder={t("contact.namePlaceholder")}
                       value={formData.name}
                       onChange={handleChange}
@@ -187,6 +203,7 @@ export default function Contact() {
                     <Input
                       type="email"
                       name="email"
+                      autoComplete="email"
                       placeholder={t("contact.emailPlaceholder")}
                       value={formData.email}
                       onChange={handleChange}
@@ -218,7 +235,6 @@ export default function Contact() {
               )}
             </div>
 
-            {/* Botão Send a Message no fundo da coluna */}
             {!submitSuccess && (
               <div className="mt-4">
                 <form onSubmit={handleSubmit}>
@@ -245,6 +261,6 @@ export default function Contact() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

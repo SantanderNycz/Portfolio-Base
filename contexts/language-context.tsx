@@ -30,6 +30,7 @@ const translations = {
     "hero.name": "Léo",
     "hero.title": "Hi, I'm",
     "hero.scrollDown": "Scroll down",
+    "hero.role": "Full-Stack Developer",
 
     // About
     "about.title": "About Me",
@@ -89,6 +90,7 @@ const translations = {
     "hero.name": "Léo",
     "hero.title": "Olá, eu sou",
     "hero.scrollDown": "Role para baixo",
+    "hero.role": "Desenvolvedor Full-Stack",
 
     // About
     "about.title": "Sobre Mim",

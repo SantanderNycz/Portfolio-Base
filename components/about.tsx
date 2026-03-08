@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, User } from "lucide-react";
-import Image from "next/image";
 import { useLanguage } from "@/contexts/language-context";
 
 export default function About() {
@@ -41,7 +40,18 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="py-10 px-4 bg-zinc-900">
+    <motion.section
+      id="about"
+      initial={{ opacity: 1 }}
+      whileInView={{ opacity: 0.98 }}
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
+      className="py-10 px-4 overflow-hidden relative z-[49]"
+      style={{
+        background:
+          "linear-gradient(to bottom, rgba(24,24,27,1), rgba(24,24,27,0.8), rgba(24,24,27,0))",
+      }}
+    >
       <div className="container mx-auto max-w-6xl">
         {/* Título da Seção */}
         <motion.div
@@ -99,6 +109,7 @@ export default function About() {
                     />
                   </clipPath>
                 </defs>
+
                 <image
                   href="/about.png"
                   width="100%"
@@ -118,7 +129,6 @@ export default function About() {
             viewport={{ once: true, amount: 0.5 }}
             className="space-y-6"
           >
-            {/* Descrição */}
             <div>
               <h3 className="text-3xl font-bold mb-4 text-amber-400">
                 {t("about.role")}
@@ -130,42 +140,9 @@ export default function About() {
                 {t("about.description2")}
               </p>
             </div>
-
-            {/* Informações de Contato */}
-            {/* <div className="space-y-4 pt-4">
-              {infoItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  className="flex items-center gap-4"
-                >
-                  <div className="p-2 rounded-lg bg-amber-800/20 text-amber-400">
-                    <item.icon size={20} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">
-                      {item.label}
-                    </p>
-                    {item.href ? (
-                      <a
-                        href={item.href}
-                        className="font-medium hover:text-amber-400 transition-colors"
-                      >
-                        {item.value}
-                      </a>
-                    ) : (
-                      <p className="font-medium">{item.value}</p>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </div> */}
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

@@ -17,12 +17,11 @@ interface Project {
   demo?: string;
 }
 
-// Importa os JSONs
 import projectsPT from "@/data/projects-pt.json";
 import projectsEN from "@/data/projects-en.json";
 
 export default function Projects() {
-  const { t, language } = useLanguage(); // pegando a linguagem
+  const { t, language } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -33,18 +32,24 @@ export default function Projects() {
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
-  // Seleciona os projetos com base na linguagem
   const projects: Project[] = language === "pt" ? projectsPT : projectsEN;
 
   return (
     <motion.section
-      className="w-full flex flex-col items-center py-12 relative z-20"
-      initial={{ backgroundColor: "#00000000" }}
-      whileInView={{ backgroundColor: "#27272A" }}
-      transition={{ duration: 0.8 }}
+      id="projects"
+      initial={{ opacity: 1 }}
+      whileInView={{ opacity: 0.98 }}
+      transition={{ duration: 1.2 }}
       viewport={{ once: true }}
+      className="py-10 px-4 overflow-hidden relative z-[49]"
+      style={{
+        background:
+          "linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27, 0.9), rgba(24,24,27, 0.9), rgba(24,24,27,0))",
+      }}
     >
-      <h2 className="text-4xl font-bold mb-4">{t("projects.title")}</h2>
+      <h2 className="text-4xl text-center font-bold mb-4">
+        {t("projects.title")}
+      </h2>
       <motion.div
         className="w-20 h-1 bg-amber-400 mx-auto mb-6 origin-left"
         initial={{ scaleX: 0 }}
@@ -52,36 +57,38 @@ export default function Projects() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.5 }}
       />
-      <p className="text-muted-foreground mb-8">{t("projects.subtitle")}</p>
+      <p className="text-muted-foreground text-center mb-8">
+        {t("projects.subtitle")}
+      </p>
 
       {/* Carousel */}
       <div className="overflow-hidden w-full relative z-10 py-4">
         <div ref={emblaRef}>
-          <div className="flex ml-[-1.5rem]">
+          <div className="flex ml-[-0.75rem] sm:ml-[-1.5rem]">
             {projects.map((project) => (
               <motion.div
                 key={project.id}
-                className="pl-6 flex-shrink-0 w-[520px] h-[300px] cursor-pointer z-10"
+                className="pl-3 sm:pl-6 flex-shrink-0 w-[calc(100vw-2rem)] sm:w-[520px] h-auto cursor-pointer z-10"
                 onClick={() => setSelectedProject(project)}
               >
                 <motion.div
-                  className="rounded-xl overflow-hidden h-full flex flex-col shadow-2xl bg-card"
+                  className="rounded-xl overflow-hidden flex flex-col shadow-2xl bg-card"
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="relative h-40 bg-muted">
+                  <div className="relative h-46 bg-muted">
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="p-4 flex flex-col justify-between flex-1">
+                  <div className="p-3 sm:p-4 flex flex-col justify-between h-36">
                     <div>
-                      <h3 className="text-xl font-bold mb-1">
+                      <h3 className="text-lg sm:text-xl font-bold mb-1">
                         {project.title}
                       </h3>
-                      <p className="text-muted-foreground text-sm">
+                      <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2">
                         {project.description}
                       </p>
                     </div>
@@ -104,7 +111,7 @@ export default function Projects() {
       </div>
 
       {/* Controles */}
-      <div className="flex gap-4 mt-6">
+      <div className="flex gap-4 mt-6 justify-center">
         <button
           onClick={scrollPrev}
           className="p-2 shadow-lg rounded-full hover:scale-110 transition-transform hover:text-amber-400 hover:drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]"
@@ -126,7 +133,8 @@ export default function Projects() {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className="bg-card rounded-xl p-8 relative max-w-4xl w-full"
+            className="bg-card rounded-xl p-4 sm:p-8 relative max-w-4xl w-full 
+                 max-h-[90vh] sm:max-h-none overflow-y-auto sm:overflow-y-visible"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -135,23 +143,27 @@ export default function Projects() {
             >
               <X size={24} />
             </button>
-            <div className="grid md:grid-cols-2 gap-8">
+
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8">
               <img
                 src={selectedProject.image}
                 alt={selectedProject.title}
-                className="w-full h-64 object-cover rounded-lg"
+                className="w-full h-48 sm:h-64 object-cover rounded-lg"
               />
+
               <div>
-                <h3 className="text-3xl font-bold mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
                   {selectedProject.title}
                 </h3>
-                <p className="text-muted-foreground mb-6">
+
+                <p className="text-muted-foreground mb-5 sm:mb-6">
                   {selectedProject.longDescription}
                 </p>
 
                 <h4 className="font-semibold mb-3 text-amber-400">
                   Technologies Used:
                 </h4>
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {selectedProject.technologies.map((tech, i) => (
                     <span
@@ -163,23 +175,28 @@ export default function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                   {selectedProject.github && (
                     <a
                       href={selectedProject.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg font-semibold hover:bg-amber-500/90 transition-all"
+                      className="inline-flex items-center justify-center sm:justify-start 
+                           gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg 
+                           font-semibold hover:bg-amber-500/90 transition-all"
                     >
                       GitHub
                     </a>
                   )}
+
                   {selectedProject.demo && (
                     <a
                       href={selectedProject.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg font-semibold hover:bg-amber-500/90 transition-all"
+                      className="inline-flex items-center justify-center sm:justify-start 
+                           gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg 
+                           font-semibold hover:bg-amber-500/90 transition-all"
                     >
                       Demo
                     </a>

@@ -41,6 +41,16 @@
   },
   {
     "id": 5,
+    "title": "Party Time",
+    "description": "PartyTime is an application to easily organize and manage parties and events.",
+    "longDescription": "PartyTime is a full-stack application with a React front-end and a Node.js back-end using Express and MongoDB, enabling user registration, event management, and full client-server integration via a REST API.",
+    "image": "/party-time.png",
+    "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
+    "github": "https://github.com/SantanderNycz/App-Orcamento",
+    "demo": "https://api-partytime-front.vercel.app/"
+  },
+  {
+    "id": 6,
     "title": "Spotify Clone",
     "description": "Spotify interface clone using CSS and JS effects.",
     "longDescription": "Functional clone of Spotify interface, developed for educational purposes, with responsive layout, simulated music player, dynamic interactions via JavaScript, and advanced CSS styling.",
@@ -50,7 +60,7 @@
     "demo": "https://spotify-clone-sandy-nine.vercel.app/"
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Fokus App",
     "description": "An app to manage focus and optimize productivity using Pomodoro method.",
     "longDescription": "Productivity application based on Pomodoro technique, allowing task management, focus cycles and breaks control, and daily performance tracking through timers and persistent states.",
@@ -60,7 +70,7 @@
     "demo": "https://fokus-xi-eight.vercel.app/"
   },
   {
-    "id": 7,
+    "id": 8,
     "title": "Green Loop",
     "description": "Hackathon project 'The Retail Hack' against food waste.",
     "longDescription": "Project developed in 'The Retail Hack' hackathon promoted by Grupo Sonae and Google, focusing on reducing food waste through identifying near-expiry products, displaying discounts, and geolocation in stores.",
@@ -70,7 +80,7 @@
     "demo": "https://green-loop-six.vercel.app/"
   },
   {
-    "id": 8,
+    "id": 9,
     "title": "Eri Pongson - v2",
     "description": "Pong game with AI, inspired by actor Eri Johnson, improving gameplay and animations.",
     "longDescription": "Pong-style game developed with Artificial Intelligence to control the opponent, with significant physics improvements, smoother animations, difficulty balancing, and performance optimization in the second version.",
@@ -80,7 +90,7 @@
     "demo": "https://eri-pongson-v2.vercel.app/"
   },
   {
-    "id": 9,
+    "id": 10,
     "title": "Notes App",
     "description": "A note-taking app with TypeScript/JS support for text or audio notes.",
     "longDescription": "Notes management application developed in TypeScript and JavaScript, supporting text and audio records, dynamic content organization, data persistence, and intuitive productivity-oriented interface.",
@@ -90,7 +100,7 @@
     "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
   },
   {
-    "id": 10,
+    "id": 11,
     "title": "Secret Number Game",
     "description": "A guessing game that tracks the number of attempts to make it competitive.",
     "longDescription": "Logic-based number guessing game where the system generates a secret number and counts user attempts, stimulating logical reasoning, state control, and dynamic interface interaction.",
@@ -100,7 +110,7 @@
     "demo": "https://secret-number-beta-project.vercel.app/"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "Encryptor",
     "description": "Encryptor allowing to copy encrypted text or reverse the process.",
     "longDescription": "Text encryption and decryption application implemented in JavaScript, enabling secure message transformation, reversal of the process, automated result copying, and data integrity validation.",

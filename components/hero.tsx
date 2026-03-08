@@ -2,14 +2,16 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter } from "lucide-react";
-import Header from "./header";
+import { ArrowDown, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import githubLogo from "@/public/github-white.svg";
+import Image from "next/image";
+import Header from "./header";
 
 export default function Hero() {
   const { t, language } = useLanguage();
   const [typedText, setTypedText] = useState("");
-  const fullText = t("Full-Stack Developer");
+  const fullText = t("hero.role");
 
   useEffect(() => {
     let currentIndex = 0;
@@ -49,8 +51,9 @@ export default function Hero() {
           </h1>
 
           <h2 className="text-xl md:text-2xl mb-8 text-zinc-300">
-            <span className="border-r-2 border-amber-400 pr-1">
+            <span className="relative pr-1">
               {typedText}
+              <span className="absolute right-0 top-0 h-full border-r-2 border-amber-400 animate-blink"></span>
             </span>
           </h2>
 
@@ -61,7 +64,13 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="bg-zinc-800 hover:bg-amber-500/80 p-3 rounded-full transition-colors"
             >
-              <Github className="w-5 h-5" />
+              <Image
+                src={githubLogo}
+                alt="GitHub"
+                width={20}
+                height={20}
+                className="w-6 h-6"
+              />
               <span className="sr-only">GitHub</span>
             </a>
             <a
@@ -70,12 +79,29 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="bg-zinc-800 hover:bg-amber-500/80 p-3 rounded-full transition-colors"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-6 h-6" />
               <span className="sr-only">LinkedIn</span>
             </a>
           </div>
 
-          <a href="#about" className="inline-block animate-bounce">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+
+              const target = document.getElementById("about");
+              if (!target) return;
+
+              const offset = 60;
+              const top =
+                target.getBoundingClientRect().top + window.scrollY - offset;
+
+              window.scrollTo({
+                top,
+                behavior: "smooth",
+              });
+            }}
+            className="inline-block animate-bounce cursor-pointer"
+          >
             <ArrowDown className="w-6 h-6 text-amber-400" />
             <span className="sr-only">Scroll down</span>
           </a>

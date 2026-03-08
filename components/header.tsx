@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
@@ -10,13 +9,21 @@ import LanguageSwitcher from "./language-switcher";
 const Header = () => {
   const { t } = useLanguage();
 
-  const navItems = [
-    { name: t("nav.home"), href: "#home" },
-    { name: t("nav.about"), href: "#about" },
-    { name: t("nav.projects"), href: "#projects" },
-    { name: t("nav.skills"), href: "#skills" },
-    { name: t("nav.contact"), href: "#contact" },
+  const navItems: { name: string; id: string }[] = [
+    { name: t("nav.home"), id: "home" },
+    { name: t("nav.about"), id: "about" },
+    { name: t("nav.projects"), id: "projects" },
+    { name: t("nav.skills"), id: "skills" },
+    { name: t("nav.contact"), id: "contact" },
   ];
+
+  const sectionOffsets: Record<string, number> = {
+    home: 0,
+    about: 50,
+    projects: 30,
+    skills: 40,
+    contact: 30,
+  };
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -30,6 +37,19 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToSection = (id: string) => {
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const offset = sectionOffsets[id] ?? (scrolled ? 72 : 96);
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+
+    window.scrollTo({
+      top,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -40,7 +60,10 @@ const Header = () => {
     >
       <div className="max-w-7xl mx-auto px-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="#home" className="text-xl font-bold">
+        <button
+          onClick={() => scrollToSection("home")}
+          className="text-xl font-bold"
+        >
           <Image
             src="/logo-leo.png"
             alt="Léo Nycz"
@@ -48,18 +71,18 @@ const Header = () => {
             height={20}
             className="mx-auto"
           />
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
               className="text-zinc-300 hover:text-amber-400 transition-colors"
             >
               {item.name}
-            </Link>
+            </button>
           ))}
           <LanguageSwitcher />
         </nav>
@@ -81,14 +104,16 @@ const Header = () => {
       >
         <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
           {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-zinc-300 hover:text-amber-400 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+            <button
+              key={item.id}
+              onClick={() => {
+                scrollToSection(item.id);
+                setIsMenuOpen(false);
+              }}
+              className="text-zinc-300 hover:text-amber-400 transition-colors py-2 text-left"
             >
               {item.name}
-            </Link>
+            </button>
           ))}
           <div className="py-2">
             <LanguageSwitcher />

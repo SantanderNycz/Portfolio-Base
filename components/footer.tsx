@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import githubLogo from "@/public/github-white.svg";
 
 export default function Footer() {
   const { t } = useLanguage();
@@ -33,7 +34,13 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="bg-zinc-800 hover:bg-amber-700/80 p-2 rounded-full transition-colors"
             >
-              <Github className="w-5 h-5" />
+              <Image
+                src={githubLogo}
+                alt="GitHub"
+                width={20}
+                height={20}
+                className="w-5 h-5"
+              />
               <span className="sr-only">GitHub</span>
             </a>
             <a

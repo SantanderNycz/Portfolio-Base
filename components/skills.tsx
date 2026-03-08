@@ -2,9 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { useLanguage } from "@/contexts/language-context";
 
-// BADGES PADRONIZADAS
 const skillBadges = [
   // FRONTEND
   {
@@ -154,10 +154,15 @@ const skillBadges = [
     badge: "https://skillicons.dev/icons?i=vercel",
     category: "tools",
   },
-  // Render com estilização especial
   {
     name: "Render",
     badge: "/render.png",
+    category: "tools",
+    skilliconsStyle: true,
+  },
+  {
+    name: "Render",
+    badge: "/railway.svg",
     category: "tools",
     skilliconsStyle: true,
   },
@@ -186,11 +191,14 @@ export default function Skills() {
   const { t, language } = useLanguage();
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  const groupedSkills = skillBadges.reduce((acc, skill) => {
-    if (!acc[skill.category]) acc[skill.category] = [];
-    acc[skill.category].push(skill);
-    return acc;
-  }, {} as Record<string, typeof skillBadges>);
+  const groupedSkills = skillBadges.reduce(
+    (acc, skill) => {
+      if (!acc[skill.category]) acc[skill.category] = [];
+      acc[skill.category].push(skill);
+      return acc;
+    },
+    {} as Record<string, typeof skillBadges>,
+  );
 
   const categoryOrder = [
     "frontend",
@@ -204,23 +212,37 @@ export default function Skills() {
   const currentCategory = categoryOrder[currentCategoryIndex];
   const currentSkills = groupedSkills[currentCategory];
 
+  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: "0px" });
+
   return (
-    <section id="skills" className="py-[7rem] px-4">
+    <motion.section
+      id="skills"
+      ref={ref}
+      initial={{ opacity: 1 }}
+      whileInView={{ opacity: 0.98 }}
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
+      className="py-10 px-4 overflow-hidden relative z-[48]"
+      style={{
+        background:
+          "linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27, 0.8), rgba(24,24,27, 0.8), rgba(24,24,27,0))",
+      }}
+    >
       <div className="container mx-auto max-w-6xl text-center mt-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          viewport={{ once: true, amount: 0.5 }}
           className="mb-12"
         >
-          <h2 className="text-4xl font-bold mb-2">{t("skills.title")}</h2>
+          <h2 className="text-4xl text-center font-bold mb-4">
+            {t("skills.title")}
+          </h2>
           <motion.div
             className="w-20 h-1 bg-amber-400 mx-auto mb-6 origin-left"
             initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
+            animate={inView ? { scaleX: 1 } : {}}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.5 }}
           />
           <p className="text-muted-foreground">{t("skills.subtitle")}</p>
         </motion.div>
@@ -266,14 +288,14 @@ export default function Skills() {
                   key={skill.name}
                   initial={{ opacity: 0, scale: 2 }}
                   animate={{ opacity: 1, scale: 1.4 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  transition={{ duration: 0.1, delay: index * 0.02 }}
                   whileHover={{ scale: 1.7, y: -5 }}
                   className="badge-animate flex flex-col items-center h-20 relative"
                   onMouseEnter={() => setHoveredSkill(skill.name)}
                   onMouseLeave={() => setHoveredSkill(null)}
                 >
                   {skill.skilliconsStyle ? (
-                    <div className="w-10 h-10 bg-slate-50 dark:bg-darkblue dark:border-zinc-700 rounded-xl flex items-center justify-center transition-all duration-200">
+                    <div className="w-10 h-10 bg-slate-50 dark:bg-darkblue dark:border-zinc-700 rounded-lg flex items-center justify-center transition-all duration-200">
                       <img
                         src={skill.badge}
                         alt={skill.name}
@@ -296,7 +318,7 @@ export default function Skills() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
+                        transition={{ duration: 0.4 }}
                         className="text-xs font-semibold text-retroYellow absolute top-11 whitespace-nowrap"
                       >
                         {skill.name}
@@ -309,6 +331,6 @@ export default function Skills() {
           </motion.div>
         </AnimatePresence>
       </div>
-    </section>
+    </motion.section>
   );
 }
