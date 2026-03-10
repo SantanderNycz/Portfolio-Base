@@ -36,9 +36,9 @@ const translations = {
     "about.title": "About Me",
     "about.role": "Full-Stack Developer",
     "about.description":
-      "I’m a Full Stack developer who loves turning ideas into modern, intuitive web applications. I enjoy combining code and design to create experiences that truly make sense for users.",
+      "I'm a Full-Stack developer trained at 42 Porto, a peer-to-peer school known for its rigorous, project-based curriculum, where I developed a strong foundation in problem-solving and low-level programming. Today I focus on building modern web applications with React, Node.js, and TypeScript, combining clean code with thoughtful design to create experiences that make sense for users.",
     "about.description2":
-      "Besides coding, I’m a musician, and I like bringing that creativity into my projects, finding original and elegant solutions. Writing clean code and constantly improving my skills are part of my everyday routine.",
+      "Besides coding, I'm a musician, and I like bringing that same creative mindset into my work, finding original, elegant solutions rather than just getting things done. I'm currently looking for opportunities where I can keep growing and contribute to real products.",
     "about.name": "Name",
     "about.email": "Email",
     "about.location": "Location",
@@ -96,9 +96,9 @@ const translations = {
     "about.title": "Sobre Mim",
     "about.role": "Desenvolvedor Full-Stack",
     "about.description":
-      "Sou um desenvolvedor Full Stack que adora transformar ideias em aplicações web modernas e intuitivas. Gosto de unir código e design para criar experiências que realmente fazem sentido para quem usa.",
+      "Sou um desenvolvedor Full-Stack formado na 42 Porto, uma escola peer-to-peer conhecida por seu currículo rigoroso e baseado em projetos, onde desenvolvi uma base sólida em resolução de problemas e programação de baixo nível. Hoje, concentro-me na criação de aplicativos web modernos com React, Node.js e TypeScript, combinando código limpo com design cuidadoso para criar experiências que fazem sentido para os usuários.",
     "about.description2":
-      "Além de programação, sou músico e sempre busco levar essa criatividade para os projetos que construo, encontrando soluções originais e elegantes. Código limpo e evolução constante são parte do meu dia a dia.",
+      "Além de programar, sou músico e gosto de trazer essa mesma mentalidade criativa para o meu trabalho, encontrando soluções originais e elegantes, em vez de apenas fazer as coisas. Atualmente, estou procurando oportunidades onde possa continuar crescendo e contribuir com produtos reais.",
     "about.name": "Nome",
     "about.email": "Email",
     "about.location": "Localização",
@@ -140,7 +140,7 @@ const translations = {
 };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export function LanguageProvider({ children }: { children: ReactNode }) {

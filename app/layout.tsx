@@ -5,12 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/contexts/language-context";
 import "./globals.css";
-
-import dynamic from "next/dynamic";
-
-const PixelBackground = dynamic(() => import("../components/PixelBackground"), {
-  ssr: false,
-});
+import PixelBackground from "@/components/PixelBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,9 +32,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LanguageProvider>
-            {children}
-          </LanguageProvider>
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

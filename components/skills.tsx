@@ -232,7 +232,7 @@ export default function Skills() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
           className="mb-12"
         >
           <h2 className="text-4xl text-center font-bold mb-4">
@@ -242,7 +242,7 @@ export default function Skills() {
             className="w-20 h-1 bg-amber-400 mx-auto mb-6 origin-left"
             initial={{ scaleX: 0 }}
             animate={inView ? { scaleX: 1 } : {}}
-            transition={{ duration: 0.5, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
           />
           <p className="text-muted-foreground">{t("skills.subtitle")}</p>
         </motion.div>
@@ -318,7 +318,7 @@ export default function Skills() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        transition={{ duration: 0.4 }}
+                        transition={{ duration: 0.3 }}
                         className="text-xs font-semibold text-retroYellow absolute top-11 whitespace-nowrap"
                       >
                         {skill.name}

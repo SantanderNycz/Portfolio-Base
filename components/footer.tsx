@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-zinc-900 border-t border-zinc-800 py-8">
-      <div className="max-w-8xl mx-auto px-4">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0 text-center md:text-left">
             <Link href="#home" className="text-xl font-bold">

@@ -43,7 +43,7 @@
     "id": 5,
     "title": "BeanBase",
     "description": "BeanBase is a social network for coffee lovers: share your experiences, discover new cafes, and connect with the community.",
-    "longDescription": "BeanBase is a full-stack web application built with React, Node.js, Express, and MongoDB that allows users to register, manage events, and interact with a RESTful API for seamless client-server communication.",
+    "longDescription": "BeanBase is a full-stack social network for coffee lovers, built with React, Node.js, Express, and PostgreSQL. Features include Google OAuth authentication, Cloudinary image uploads, real-time search, a notifications system, and coffee shop management, deployed on Railway with Neon PostgreSQL.",
     "image": "/beanbase.png",
     "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
     "github": "https://github.com/SantanderNycz/BeanBase",
