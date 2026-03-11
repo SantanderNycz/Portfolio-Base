@@ -3,10 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Mail, MapPin, Phone, Send, Download } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Mail, MapPin, Phone, Send, Download, CheckCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
 export default function Contact() {
@@ -26,13 +23,10 @@ export default function Contact() {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState("");
 
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    rootMargin: "0px",
-  });
+  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: "0px" });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -64,12 +58,30 @@ export default function Contact() {
       } else {
         setSubmitError("Erro ao enviar. Tenta novamente mais tarde.");
       }
-    } catch (error) {
+    } catch {
       setSubmitError("Erro de conexão. Verifica tua internet.");
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  const infoItems = [
+    {
+      icon: <MapPin className="w-5 h-5 text-amber-500" />,
+      label: t("contact.location"),
+      value: "Porto - Portugal",
+    },
+    {
+      icon: <Mail className="w-5 h-5 text-amber-500" />,
+      label: t("contact.email"),
+      value: "santandernycz.ls@gmail.com",
+    },
+    {
+      icon: <Phone className="w-5 h-5 text-amber-500" />,
+      label: t("contact.phone"),
+      value: "+351 915619867",
+    },
+  ];
 
   return (
     <motion.section
@@ -88,109 +100,86 @@ export default function Contact() {
           : {}
       }
       transition={{ duration: 1.2, ease: "easeOut" }}
-      className="py-20 overflow-hidden relative z-[48]"
+      className="py-24 overflow-hidden relative z-[48]"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
+
+        {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-2">
-            {t("contact.title")}
-          </h2>
-          <motion.div
-            className="w-20 h-1 bg-amber-400 mx-auto mb-6 origin-left"
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          />
-          <p className="text-zinc-300 max-w-2xl mx-auto">
+          <p className="text-zinc-500 text-xs tracking-[0.3em] uppercase mb-3">
             {t("contact.subtitle")}
           </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-zinc-100">
+            {t("contact.title")}
+          </h2>
+          <div className="w-12 h-px bg-amber-500 mt-4" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Lado esquerdo */}
+        {/* Grid 1/3 + 2/3 */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-16 items-start">
+
+          {/* LEFT — 1 col */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -40 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-col justify-between h-full"
+            className="flex flex-col gap-10"
           >
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                {t("contact.info")}
-              </h3>
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-zinc-700 p-3 rounded-lg mr-4">
-                    <MapPin className="w-5 h-5 text-amber-400" />
+            <div className="flex flex-col gap-8">
+              {infoItems.map((item, i) => (
+                <div key={i} className="flex items-start gap-4 group">
+                  <div className="flex items-center justify-center w-11 h-11 rounded-full border border-zinc-800 bg-zinc-900/60 group-hover:border-amber-700/50 transition-colors duration-300 shrink-0 mt-0.5">
+                    {item.icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-medium">
-                      {t("contact.location")}
-                    </h4>
-                    <p className="text-zinc-400">Porto - Portugal</p>
+                    <p className="text-zinc-500 text-xs tracking-widest uppercase mb-1">
+                      {item.label}
+                    </p>
+                    <p className="text-zinc-200 text-base">{item.value}</p>
                   </div>
                 </div>
-
-                <div className="flex items-start">
-                  <div className="bg-zinc-700 p-3 rounded-lg mr-4">
-                    <Mail className="w-5 h-5 text-amber-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium">
-                      {t("contact.email")}
-                    </h4>
-                    <p className="text-zinc-400">santandernycz.ls@gmail.com</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="bg-zinc-700 p-3 rounded-lg mr-4">
-                    <Phone className="w-5 h-5 text-amber-400" />
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-medium">
-                      {t("contact.phone")}
-                    </h4>
-                    <p className="text-zinc-400">+351 915619867</p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
 
-            <div className="mt-8">
-              <a href={cvFile} download>
-                <Button className="bg-amber-600 hover:bg-amber-700 text-white w-full flex items-center justify-center gap-2">
-                  <Download className="w-4 h-4" />
-                  {t("contact.downloadCV")}
-                </Button>
-              </a>
-            </div>
+            <a href={cvFile} download className="w-fit">
+              <button className="flex items-center gap-2 border border-zinc-700 hover:border-amber-700/60 bg-zinc-900/50 hover:bg-amber-700/10 text-zinc-300 hover:text-amber-400 text-xs tracking-widest uppercase px-5 py-3 rounded-lg transition-all duration-300">
+                <Download className="w-3.5 h-3.5" />
+                {t("contact.downloadCV")}
+              </button>
+            </a>
           </motion.div>
 
-          {/* Lado direito */}
+          {/* RIGHT — 2 cols */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col justify-between h-full"
+            className="md:col-span-2 relative rounded-2xl border border-zinc-800/60 bg-zinc-900/70 backdrop-blur-md p-10 shadow-xl shadow-black/30"
           >
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                {t("contact.message")}
-              </h3>
-              {submitSuccess ? (
-                <div className="bg-amber-700/20 border border-amber-400 text-amber-400 p-4 rounded-lg">
+            <h3 className="text-zinc-200 text-sm tracking-[0.15em] uppercase font-light mb-8">
+              {t("contact.message")}
+            </h3>
+
+            {submitSuccess ? (
+              <div className="flex flex-col items-center justify-center gap-4 py-16 text-center">
+                <CheckCircle className="w-12 h-12 text-amber-500" />
+                <p className="text-zinc-300 text-sm tracking-wide">
                   {t("contact.success")}
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <Input
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-zinc-500 text-xs tracking-widest uppercase">
+                      {t("contact.namePlaceholder")}
+                    </label>
+                    <input
                       type="text"
                       name="name"
                       autoComplete="name"
@@ -198,9 +187,14 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="bg-zinc-700 border-zinc-600 text-zinc-100 placeholder:text-zinc-400"
+                      className="bg-zinc-800/60 border border-zinc-700/50 rounded-lg px-4 py-3 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-amber-700/60 focus:bg-zinc-800 transition-all duration-200"
                     />
-                    <Input
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <label className="text-zinc-500 text-xs tracking-widest uppercase">
+                      {t("contact.emailPlaceholder")}
+                    </label>
+                    <input
                       type="email"
                       name="email"
                       autoComplete="email"
@@ -208,55 +202,63 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="bg-zinc-700 border-zinc-600 text-zinc-100 placeholder:text-zinc-400"
+                      className="bg-zinc-800/60 border border-zinc-700/50 rounded-lg px-4 py-3 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-amber-700/60 focus:bg-zinc-800 transition-all duration-200"
                     />
                   </div>
-                  <Input
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label className="text-zinc-500 text-xs tracking-widest uppercase">
+                    {t("contact.subject") ?? "Assunto"}
+                  </label>
+                  <input
                     type="text"
                     name="subject"
-                    placeholder={t("contact.message")}
+                    placeholder={t("contact.subject") ?? "Assunto"}
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="bg-zinc-700 border-zinc-600 text-zinc-100 placeholder:text-zinc-400"
+                    className="bg-zinc-800/60 border border-zinc-700/50 rounded-lg px-4 py-3 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-amber-700/60 focus:bg-zinc-800 transition-all duration-200"
                   />
-                  <Textarea
+                </div>
+
+                <div className="flex flex-col gap-2">
+                  <label className="text-zinc-500 text-xs tracking-widest uppercase">
+                    {t("contact.messagePlaceholder")}
+                  </label>
+                  <textarea
                     name="message"
                     placeholder={t("contact.messagePlaceholder")}
                     value={formData.message}
                     onChange={handleChange}
                     required
-                    className="bg-zinc-700 border-zinc-600 text-zinc-100 placeholder:text-zinc-400 min-h-[150px]"
+                    rows={6}
+                    className="bg-zinc-800/60 border border-zinc-700/50 rounded-lg px-4 py-3 text-sm text-zinc-200 placeholder:text-zinc-600 focus:outline-none focus:border-amber-700/60 focus:bg-zinc-800 transition-all duration-200 resize-none"
                   />
-                  {submitError && (
-                    <div className="text-red-400 text-sm">{submitError}</div>
-                  )}
-                </form>
-              )}
-            </div>
+                </div>
 
-            {!submitSuccess && (
-              <div className="mt-4">
-                <form onSubmit={handleSubmit}>
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="bg-amber-600 hover:bg-amber-700 text-white w-full flex items-center justify-center gap-2"
-                  >
-                    {isSubmitting ? (
-                      <span className="flex items-center">
-                        <span className="animate-spin mr-2 h-4 w-4 border-2 border-white border-t-transparent rounded-full"></span>
-                        {t("contact.sending")}
-                      </span>
-                    ) : (
-                      <span className="flex items-center">
-                        <Send className="w-4 h-4 mr-2" />
-                        {t("contact.send")}
-                      </span>
-                    )}
-                  </Button>
-                </form>
-              </div>
+                {submitError && (
+                  <p className="text-red-400 text-xs">{submitError}</p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="mt-2 flex items-center justify-center gap-2 bg-amber-700/80 hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs tracking-widest uppercase font-medium py-3.5 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-amber-900/30 group w-fit self-end"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <span className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      {t("contact.sending")}
+                    </>
+                  ) : (
+                    <>
+                      {t("contact.send")}
+                      <Send className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
+                    </>
+                  )}
+                </button>
+              </form>
             )}
           </motion.div>
         </div>

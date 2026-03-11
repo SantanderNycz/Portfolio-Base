@@ -56,8 +56,7 @@ const translations = {
 
     // Contact
     "contact.title": "Get In Touch",
-    "contact.subtitle":
-      "Feel free to reach out for collaborations or just a friendly hello",
+    "contact.subtitle": "Feel free to reach out!",
     "contact.getInTouch": "Contact Information",
     "contact.info": "Contact Information",
     "contact.location": "Location",
@@ -66,10 +65,12 @@ const translations = {
     "contact.name": "Name",
     "contact.namePlaceholder": "Your name",
     "contact.emailPlaceholder": "your.email@example.com",
+    "contact.subject": "Subject",
     "contact.message": "Message",
     "contact.messagePlaceholder": "Your message...",
     "contact.send": "Send Message",
     "contact.downloadCV": "Download CV",
+    "contact.success": "Message sent!",
 
     // Footer
     "footer.madeWith": "Made with",
@@ -116,8 +117,7 @@ const translations = {
 
     // Contact
     "contact.title": "Entre em Contato",
-    "contact.subtitle":
-      "Sinta-se à vontade para entrar em contato para colaborações ou apenas um olá amigável",
+    "contact.subtitle": "Sinta-se à vontade para entrar em contato!",
     "contact.getInTouch": "Informações de Contato",
     "contact.info": "Informações de Contato",
     "contact.location": "Localização",
@@ -126,10 +126,12 @@ const translations = {
     "contact.name": "Nome",
     "contact.namePlaceholder": "Seu nome",
     "contact.emailPlaceholder": "seu.email@exemplo.com",
+    "contact.subject": "Assunto",
     "contact.message": "Mensagem",
     "contact.messagePlaceholder": "Sua mensagem...",
     "contact.send": "Enviar Mensagem",
     "contact.downloadCV": "Baixar CV",
+    "contact.success": "Mensagem enviada!",
 
     // Footer
     "footer.madeWith": "Feito com",
