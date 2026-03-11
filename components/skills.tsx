@@ -225,7 +225,7 @@ export default function Skills() {
       className="py-10 px-4 overflow-hidden relative z-[48]"
       style={{
         background:
-          "linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27, 0.8), rgba(24,24,27, 0.8), rgba(24,24,27,0))",
+          "linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27,0.1), rgba(24,24,27,0.45), rgba(24,24,27,0.65), rgba(24,24,27,0.45), rgba(24,24,27,0.1), rgba(24,24,27,0))",
       }}
     >
       <div className="container mx-auto max-w-6xl text-center mt-10">

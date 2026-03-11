@@ -11,7 +11,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-zinc-900 border-t border-zinc-800 py-8">
+    <footer className="bg-zinc-950 border-t border-zinc-800 py-8">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-amber-600/50 to-transparent" />
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0 text-center md:text-left">
@@ -55,11 +56,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-zinc-800 mt-6 pt-6 text-center text-zinc-400 text-sm">
-          <p>
-            &copy; {currentYear} Léo Santander Nycz. {t("footer.rights")}
-          </p>
-        </div>
+        <div className="my-8 h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent" />
+        <p className="text-center text-md tracking-widest">
+          {String.fromCharCode(169)} {currentYear} {"\u00B7"} Leo Santander Nycz{" "}
+          {"\u00B7"} {t("footer.rights")}
+        </p>
       </div>
     </footer>
   );
