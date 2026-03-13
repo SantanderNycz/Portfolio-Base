@@ -49,7 +49,7 @@ export default function About() {
       className="py-10 px-4 overflow-hidden relative z-[49]"
       style={{
         background:
-          "linear-gradient(to bottom, rgba(24,24,27,1), rgba(24,24,27,0.8), rgba(24,24,27,0))",
+          "linear-gradient(to bottom, rgba(24,24,27,0) 0%, rgba(24,24,27,0.6) 30%, rgba(24,24,27,0.85) 70%, rgba(24,24,27,0) 100%)",
       }}
     >
       <div className="container mx-auto max-w-6xl">

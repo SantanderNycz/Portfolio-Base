@@ -36,8 +36,8 @@ export default function Hero() {
     >
       <Header />
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/20 via-zinc-900/60 to-zinc-900"></div>
-        <div className="h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-800/20 via-zinc-900/60 to-zinc-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-900/20 via-zinc-900/30 to-transparent"></div>
+        <div className="h-full w-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-zinc-800/10 via-zinc-900/20 to-transparent"></div>
       </div>
 
       <div className="container mx-auto px-4 text-center">

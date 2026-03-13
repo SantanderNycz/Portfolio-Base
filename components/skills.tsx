@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
 const skillBadges = [
@@ -65,17 +66,23 @@ const skillBadges = [
     category: "backend",
   },
   { name: "C", badge: "https://skillicons.dev/icons?i=c", category: "backend" },
+  // {
+  //   name: "JWT",
+  //   badge: "https://api.iconify.design/logos/jwt-icon.svg",
+  //   category: "backend",
+  //   skilliconsStyle: true,
+  // },
   {
-    name: "JWT",
-    badge: "https://api.iconify.design/logos/jwt-icon.svg",
+    name: "Jest.js",
+    badge: "https://skillicons.dev/icons?i=jest",
     category: "backend",
-    skilliconsStyle: true,
+    skilliconsStyle: false,
   },
 
   // DATABASE
   {
-    name: "MySQL",
-    badge: "https://skillicons.dev/icons?i=mysql",
+    name: "SQLite",
+    badge: "https://skillicons.dev/icons?i=sqlite",
     category: "database",
   },
   {
@@ -92,13 +99,6 @@ const skillBadges = [
     name: "Prisma",
     badge: "https://skillicons.dev/icons?i=prisma",
     category: "database",
-  },
-
-  // TESTING
-  {
-    name: "Jest.js",
-    badge: "https://skillicons.dev/icons?i=jest",
-    category: "testing",
   },
 
   // DESIGN
@@ -118,54 +118,54 @@ const skillBadges = [
     category: "design",
   },
 
-  // TOOLS
+  // DevOps
   {
     name: "Linux",
     badge: "https://skillicons.dev/icons?i=linux",
-    category: "tools",
+    category: "devops",
   },
   {
     name: "Bash",
     badge: "https://skillicons.dev/icons?i=bash",
-    category: "tools",
+    category: "devops",
   },
   {
     name: "Git",
     badge: "https://skillicons.dev/icons?i=git",
-    category: "tools",
+    category: "devops",
   },
   {
     name: "GitHub",
     badge: "https://skillicons.dev/icons?i=github",
-    category: "tools",
+    category: "devops",
   },
   {
     name: "Docker",
     badge: "https://skillicons.dev/icons?i=docker",
-    category: "tools",
+    category: "devops",
   },
   {
     name: "AWS",
     badge: "https://skillicons.dev/icons?i=aws",
-    category: "tools",
+    category: "devops",
   },
-  {
-    name: "Vercel",
-    badge: "https://skillicons.dev/icons?i=vercel",
-    category: "tools",
-  },
-  {
-    name: "Render",
-    badge: "/render.png",
-    category: "tools",
-    skilliconsStyle: true,
-  },
-  {
-    name: "Render",
-    badge: "/railway.svg",
-    category: "tools",
-    skilliconsStyle: true,
-  },
+  // {
+  //   name: "Vercel",
+  //   badge: "https://skillicons.dev/icons?i=vercel",
+  //   category: "devops",
+  // },
+  // {
+  //   name: "Render",
+  //   badge: "/render.png",
+  //   category: "devops",
+  //   skilliconsStyle: true,
+  // },
+  // {
+  //   name: "Railway",
+  //   badge: "/railway.svg",
+  //   category: "devops",
+  //   skilliconsStyle: true,
+  // },
 ];
 
 const categoryTranslations = {
@@ -173,23 +173,70 @@ const categoryTranslations = {
     frontend: "Frontend",
     backend: "Backend",
     database: "Database",
-    testing: "Testing",
-    tools: "Tools",
+    // testing: "Testing",
+    devops: "DevOps",
     design: "Design",
   },
   pt: {
     frontend: "Frontend",
     backend: "Backend",
     database: "Banco de Dados",
-    testing: "Testes",
-    tools: "Ferramentas",
+    // testing: "Testes",
+    devops: "DevOps",
     design: "Design",
   },
+};
+
+const categoryOrder = [
+  "frontend",
+  "backend",
+  "database",
+  // "testing",
+  "devops",
+  "design",
+];
+
+const slideVariants = {
+  enter: (dir: number) => ({
+    opacity: 0,
+    x: dir > 0 ? 80 : -80,
+  }),
+  center: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.35, ease: [0.25, 0.46, 0.45, 0.94] },
+  },
+  exit: (dir: number) => ({
+    opacity: 0,
+    x: dir > 0 ? -80 : 80,
+    transition: { duration: 0.25, ease: [0.55, 0, 1, 0.45] },
+  }),
+};
+
+const iconVariants = {
+  hidden: { opacity: 0, scale: 0.6, y: 10 },
+  visible: (i: number) => ({
+    opacity: 1,
+    scale: 1.4,
+    y: 0,
+    transition: { duration: 0.25, delay: i * 0.015, ease: "backOut" },
+  }),
 };
 
 export default function Skills() {
   const { t, language } = useLanguage();
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
+
+  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: "0px" });
+
+  useEffect(() => {
+    skillBadges.forEach((skill) => {
+      const img = new window.Image();
+      img.src = skill.badge;
+    });
+  }, []);
 
   const groupedSkills = skillBadges.reduce(
     (acc, skill) => {
@@ -200,19 +247,22 @@ export default function Skills() {
     {} as Record<string, typeof skillBadges>,
   );
 
-  const categoryOrder = [
-    "frontend",
-    "backend",
-    "database",
-    "testing",
-    "tools",
-    "design",
-  ];
-  const [currentCategoryIndex, setCurrentCategoryIndex] = useState(0);
   const currentCategory = categoryOrder[currentCategoryIndex];
   const currentSkills = groupedSkills[currentCategory];
+  const labels =
+    categoryTranslations[language as keyof typeof categoryTranslations];
 
-  const { ref, inView } = useInView({ triggerOnce: true, rootMargin: "0px" });
+  const scrollPrev = () => {
+    setDirection(-1);
+    setCurrentCategoryIndex(
+      (prev) => (prev - 1 + categoryOrder.length) % categoryOrder.length,
+    );
+  };
+
+  const scrollNext = () => {
+    setDirection(1);
+    setCurrentCategoryIndex((prev) => (prev + 1) % categoryOrder.length);
+  };
 
   return (
     <motion.section
@@ -247,89 +297,106 @@ export default function Skills() {
           <p className="text-muted-foreground">{t("skills.subtitle")}</p>
         </motion.div>
 
-        {/* Swipe de categorias */}
-        <div className="z-10 py-4 flex justify-center mb-8 gap-4 overflow-x-auto no-scrollbar">
-          {categoryOrder.map((cat, index) => (
-            <button
-              key={cat}
-              onClick={() => setCurrentCategoryIndex(index)}
-              className={`w-4 h-4 rounded-full transition-all ${
-                currentCategoryIndex === index ? "bg-amber-400" : "bg-gray-300"
-              }`}
-              title={
-                categoryTranslations[
-                  language as keyof typeof categoryTranslations
-                ][cat as keyof typeof categoryTranslations.en]
-              }
-            />
-          ))}
+        {/* Dots + Chevrons */}
+        <div className="z-10 py-4 flex justify-center items-center mb-8 gap-4">
+          <button
+            onClick={scrollPrev}
+            className="p-2 shadow-lg rounded-full hover:scale-110 transition-transform hover:text-amber-400 hover:drop-shadow-[0_0_6px_rgba(251,191,36,0.8)]"
+          >
+            <ChevronLeft size={26} />
+          </button>
+
+          <div className="flex gap-4 items-center">
+            {categoryOrder.map((cat, index) => (
+              <button
+                key={cat}
+                onClick={() => {
+                  setDirection(index > currentCategoryIndex ? 1 : -1);
+                  setCurrentCategoryIndex(index);
+                }}
+                className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                  currentCategoryIndex === index
+                    ? "bg-amber-400 scale-125"
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
+                title={labels[cat as keyof typeof labels]}
+              />
+            ))}
+          </div>
+
+          <button
+            onClick={scrollNext}
+            className="p-2 shadow-lg rounded-full hover:scale-110 transition-transform hover:text-amber-400 hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.8)]"
+          >
+            <ChevronRight size={26} />
+          </button>
         </div>
 
-        {/* Skills da categoria selecionada */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentCategory}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h3 className="text-xl font-semibold text-zinc mb-10">
-              {
-                categoryTranslations[
-                  language as keyof typeof categoryTranslations
-                ][currentCategory as keyof typeof categoryTranslations.en]
-              }
-            </h3>
+        {/* Skills */}
+        <div className="relative overflow-hidden">
+          <AnimatePresence mode="wait" custom={direction}>
+            <motion.div
+              key={currentCategory}
+              custom={direction}
+              variants={slideVariants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+            >
+              <h3 className="text-xl font-semibold text-zinc-200 mb-10">
+                {labels[currentCategory as keyof typeof labels]}
+              </h3>
 
-            <div className="flex flex-wrap justify-center gap-8 h-32">
-              {currentSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  initial={{ opacity: 0, scale: 2 }}
-                  animate={{ opacity: 1, scale: 1.4 }}
-                  transition={{ duration: 0.1, delay: index * 0.02 }}
-                  whileHover={{ scale: 1.7, y: -5 }}
-                  className="badge-animate flex flex-col items-center h-20 relative"
-                  onMouseEnter={() => setHoveredSkill(skill.name)}
-                  onMouseLeave={() => setHoveredSkill(null)}
-                >
-                  {skill.skilliconsStyle ? (
-                    <div className="w-10 h-10 bg-slate-50 dark:bg-darkblue dark:border-zinc-700 rounded-lg flex items-center justify-center transition-all duration-200">
+              <div className="flex flex-wrap justify-center gap-8 h-32">
+                {currentSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    custom={index}
+                    variants={iconVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover={{ scale: 1.7, y: -5 }}
+                    className="badge-animate flex flex-col items-center h-20 relative"
+                    onMouseEnter={() => setHoveredSkill(skill.name)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                  >
+                    {skill.skilliconsStyle ? (
+                      <div className="w-10 h-10 bg-slate-50 dark:bg-darkblue dark:border-zinc-700 rounded-lg flex items-center justify-center transition-all duration-200">
+                        <img
+                          src={skill.badge}
+                          alt={skill.name}
+                          className="w-[34px] h-[34px] object-contain"
+                          loading="eager"
+                        />
+                      </div>
+                    ) : (
                       <img
                         src={skill.badge}
                         alt={skill.name}
-                        className="w-[34px] h-[34px] object-contain"
-                        loading="lazy"
+                        className="h-10 w-10 object-contain transition-all duration-300 hover:drop-shadow-lg"
+                        loading="eager"
                       />
-                    </div>
-                  ) : (
-                    <img
-                      src={skill.badge}
-                      alt={skill.name}
-                      className="h-10 w-10 object-contain transition-all duration-300 hover:drop-shadow-lg"
-                      loading="lazy"
-                    />
-                  )}
-
-                  <AnimatePresence>
-                    {hoveredSkill === skill.name && (
-                      <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-xs font-semibold text-retroYellow absolute top-11 whitespace-nowrap"
-                      >
-                        {skill.name}
-                      </motion.p>
                     )}
-                  </AnimatePresence>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </AnimatePresence>
+
+                    <AnimatePresence>
+                      {hoveredSkill === skill.name && (
+                        <motion.p
+                          initial={{ opacity: 0, y: -4 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -4 }}
+                          transition={{ duration: 0.15 }}
+                          className="text-xs font-semibold text-retroYellow absolute top-11 whitespace-nowrap"
+                        >
+                          {skill.name}
+                        </motion.p>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </motion.section>
   );
