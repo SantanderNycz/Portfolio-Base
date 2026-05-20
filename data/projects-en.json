@@ -1,15 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "Bikcraft",
-    "description": "A modern and responsive portfolio website with dark mode support.",
-    "longDescription": "Web application developed with focus on responsiveness, accessibility, and user experience, including dark mode support, detailed project pages, JavaScript animations, and optimized structure for performance and SEO.",
-    "image": "/bikcraft.png",
-    "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
-    "github": "https://github.com/SantanderNycz/bikcraft",
-    "demo": "https://bikcraft-git-main-santandernyczs-projects.vercel.app/"
-  },
-  {
     "id": 2,
     "title": "Sandlerflix",
     "description": "A project fully dedicated to Adam Sandler.",
@@ -28,16 +18,6 @@
     "technologies": ["C", "ShellScript"],
     "github": "https://github.com/SantanderNycz/42CommonCore",
     "demo": "/projetos-42"
-  },
-  {
-    "id": 4,
-    "title": "Budget App",
-    "description": "A budget app created for Stock Som and Stock Music stores, with automatic date updates and print.",
-    "longDescription": "Custom budget generation system for Stock Som and Stock Music stores, with automatic date updates, record duplication for clients, document generation for printing, and optimized commercial workflow.",
-    "image": "/order.png",
-    "technologies": ["JavaScript", "TypeScript", "CSS"],
-    "github": "https://github.com/SantanderNycz/App-Orcamento",
-    "demo": "https://app-orcamento-lyart.vercel.app/"
   },
   {
     "id": 5,
@@ -67,73 +47,40 @@
     "demo": "https://spotify-clone-sandy-nine.vercel.app/"
   },
   {
-    "id": 7,
-    "title": "Fokus App",
-    "description": "An app to manage focus and optimize productivity using Pomodoro method.",
-    "longDescription": "Productivity application based on Pomodoro technique, allowing task management, focus cycles and breaks control, and daily performance tracking through timers and persistent states.",
-    "image": "/fokus.png",
-    "technologies": ["JavaScript", "HTML", "CSS"],
-    "github": "https://github.com/SantanderNycz/fokus",
-    "demo": "https://fokus-xi-eight.vercel.app/"
+    "id": 14,
+    "title": "Strata",
+    "description": "Interactive 3D web application for designing and simulating industrial drilling patterns and blast sequences.",
+    "longDescription": "Strata is an interactive 3D visualization tool built with React and Three.js, allowing engineers and designers to plan, visualize, and simulate industrial drilling patterns and blast sequences in real time. Features a Node.js backend for data processing.",
+    "image": "/placeholder.jpg",
+    "technologies": ["React", "Three.js", "Node.JS", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/strata",
+    "demo": "https://strata-vs.vercel.app/"
   },
   {
-    "id": 8,
-    "title": "Party Time",
-    "description": "PartyTime is an application to easily organize and manage parties and events.",
-    "longDescription": "PartyTime is a full-stack application with a React front-end and a Node.js back-end using Express and MongoDB, enabling user registration, event management, and full client-server integration via a REST API.",
-    "image": "/party-time.png",
-    "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
-    "github": "https://github.com/SantanderNycz/api-partytime-front",
-    "demo": "https://api-partytime-front.vercel.app/"
-  },
-  {
-    "id": 9,
-    "title": "Green Loop",
-    "description": "Hackathon project 'The Retail Hack' against food waste.",
-    "longDescription": "Project developed in 'The Retail Hack' hackathon promoted by Grupo Sonae and Google, focusing on reducing food waste through identifying near-expiry products, displaying discounts, and geolocation in stores.",
-    "image": "/greenloop.png",
-    "technologies": ["JavaScript", "TypeScript", "CSS", "HTML"],
-    "github": "https://github.com/SantanderNycz/GreenLoop",
-    "demo": "https://green-loop-six.vercel.app/"
-  },
-  {
-    "id": 100,
-    "title": "Eri Pongson - v2",
-    "description": "Pong game with AI, inspired by actor Eri Johnson, improving gameplay and animations.",
-    "longDescription": "Pong-style game developed with Artificial Intelligence to control the opponent, with significant physics improvements, smoother animations, difficulty balancing, and performance optimization in the second version.",
+    "id": 20,
+    "title": "Games",
+    "description": "Interactive games and experiences — Pong with AI, detective puzzles, Canvas-based adventures and more.",
+    "longDescription": "A collection of browser games and interactive experiences: Eri Pongson (Pong with AI), Secret Number Game, The Files (detective thriller), The Audition, and So_Long v3 (Canvas port of the 42 Porto project).",
     "image": "/Pongson.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/SantanderNycz/eri-pongson-v2",
-    "demo": "https://eri-pongson-v2.vercel.app/"
+    "technologies": ["JavaScript", "TypeScript", "Canvas API", "React"],
+    "demo": "/jogos"
   },
   {
-    "id": 11,
-    "title": "Notes App",
-    "description": "A note-taking app with TypeScript/JS support for text or audio notes.",
-    "longDescription": "Notes management application developed in TypeScript and JavaScript, supporting text and audio records, dynamic content organization, data persistence, and intuitive productivity-oriented interface.",
-    "image": "/Notes.png",
-    "technologies": ["HTML", "CSS", "JavaScript", "TypeScript"],
-    "github": "https://github.com/SantanderNycz/nlw-expert-notes",
-    "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
+    "id": 21,
+    "title": "Base Projects",
+    "description": "Foundational projects covering JS, React, Node.js and full-stack development fundamentals.",
+    "longDescription": "A set of projects that consolidate core development skills: Green Loop (hackathon), Notes App, Party Time (full-stack), Budget App, Fokus (Pomodoro), and Encryptor — each exploring different layers of web development.",
+    "image": "/fokus.png",
+    "technologies": ["JavaScript", "React", "Node.JS", "TypeScript"],
+    "demo": "/projetos-base"
   },
   {
-    "id": 12,
-    "title": "Secret Number Game",
-    "description": "A guessing game that tracks the number of attempts to make it competitive.",
-    "longDescription": "Logic-based number guessing game where the system generates a secret number and counts user attempts, stimulating logical reasoning, state control, and dynamic interface interaction.",
-    "image": "/NumeroSecreto.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/SantanderNycz/Jogo-do-numero-secreto",
-    "demo": "https://secret-number-beta-project.vercel.app/"
-  },
-  {
-    "id": 13,
-    "title": "Encryptor",
-    "description": "Encryptor allowing to copy encrypted text or reverse the process.",
-    "longDescription": "Text encryption and decryption application implemented in JavaScript, enabling secure message transformation, reversal of the process, automated result copying, and data integrity validation.",
-    "image": "/decoder.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/SantanderNycz/Decode",
-    "demo": "https://decode-sand-three.vercel.app/"
+    "id": 22,
+    "title": "Websites",
+    "description": "Responsive websites and landing pages with focus on design, UX and best development practices.",
+    "longDescription": "A collection of websites and landing pages: Bikcraft, Casa Santé, Dogs (React social network), Licittare (Angular landing page), and Duck Shop (e-commerce with GSAP animations) — all focused on responsive, accessible design.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "Angular", "React"],
+    "demo": "/sites"
   }
 ]

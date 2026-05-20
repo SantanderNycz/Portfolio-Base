@@ -52,7 +52,7 @@ const translations = {
     // Skills
     "skills.title": "My Skills",
     "skills.subtitle":
-      "Here's a breakdown of my technical skills and proficiency levels.",
+      "Here is a summary of the technical skills I have used in my projects.",
 
     // Contact
     "contact.title": "Get In Touch",
@@ -113,7 +113,7 @@ const translations = {
     // Skills
     "skills.title": "Minhas Habilidades",
     "skills.subtitle":
-      "Aqui está um resumo das minhas habilidades técnicas e níveis de proficiência.",
+      "Aqui está um resumo das minhas habilidades técnicas utilizadas nos meus projetos.",
 
     // Contact
     "contact.title": "Entre em Contato",

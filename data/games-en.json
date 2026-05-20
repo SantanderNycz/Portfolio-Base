@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Eri Pongson - v2",
+    "description": "Pong game with AI, inspired by actor Eri Johnson, improving gameplay and animations.",
+    "image": "/Pongson.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/eri-pongson-v2",
+    "demo": "https://eri-pongson-v2.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Secret Number Game",
+    "description": "A guessing game that tracks the number of attempts to make it competitive.",
+    "image": "/NumeroSecreto.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Jogo-do-numero-secreto",
+    "demo": "https://secret-number-beta-project.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "The Files",
+    "description": "A detective-themed browser game set in the Porto Police Department, built with React and TypeScript.",
+    "image": "/placeholder.jpg",
+    "technologies": ["React", "TypeScript", "Vite"],
+    "github": "https://github.com/SantanderNycz/the-files",
+    "demo": "https://the-files-vs.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "The Audition",
+    "description": "An interactive web game experience built with TypeScript, JavaScript and Tailwind CSS.",
+    "image": "/placeholder.jpg",
+    "technologies": ["TypeScript", "JavaScript", "TailwindCSS"],
+    "github": "https://github.com/SantanderNycz/the-audition",
+    "demo": "https://the-audition.vercel.app"
+  },
+  {
+    "id": 5,
+    "title": "So_Long v3",
+    "description": "Browser port of the 42 Porto so_long project, with movement, enemies and animations using the Canvas API.",
+    "image": "/42.png",
+    "technologies": ["TypeScript", "Canvas API", "Vite"],
+    "github": "https://github.com/SantanderNycz/so_long_v3",
+    "demo": "https://so-long-v3.vercel.app"
+  }
+]

@@ -3,7 +3,8 @@
 import { useState, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { useLanguage } from "@/contexts/language-context";
 
 interface Project {
@@ -65,47 +66,106 @@ export default function Projects() {
       <div className="overflow-hidden w-full relative z-10 py-4">
         <div ref={emblaRef}>
           <div className="flex ml-[-0.75rem] sm:ml-[-1.5rem]">
-            {projects.map((project) => (
-              <motion.div
-                key={project.id}
-                className="pl-3 sm:pl-6 flex-shrink-0 w-[calc(100vw-2rem)] sm:w-[520px] h-auto cursor-pointer z-10"
-                onClick={() => setSelectedProject(project)}
-              >
+            {projects.map((project) => {
+              const isCategory = project.demo?.startsWith("/");
+
+              if (isCategory) {
+                return (
+                  <motion.div
+                    key={project.id}
+                    className="pl-3 sm:pl-6 flex-shrink-0 w-[calc(100vw-2rem)] sm:w-[520px] h-auto z-10"
+                  >
+                    <Link href={project.demo!}>
+                      <motion.div
+                        className="rounded-xl overflow-hidden flex flex-col shadow-2xl bg-card border border-amber-400/20 hover:border-amber-400/60 transition-colors cursor-pointer"
+                        whileHover={{ scale: 1.05 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        <div className="relative h-46 bg-muted">
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                          <span className="absolute bottom-3 left-3 text-xs font-semibold px-2 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 backdrop-blur-sm">
+                            {language === "pt" ? "Coleção de Projetos" : "Project Collection"}
+                          </span>
+                        </div>
+                        <div className="p-3 sm:p-4 flex flex-col justify-between h-36">
+                          <div>
+                            <h3 className="text-lg sm:text-xl font-bold mb-1">
+                              {project.title}
+                            </h3>
+                            <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2">
+                              {project.description}
+                            </p>
+                          </div>
+                          <div className="flex items-center justify-between mt-2">
+                            <div className="flex flex-wrap gap-2">
+                              {project.technologies.slice(0, 3).map((tech, i) => (
+                                <span
+                                  key={i}
+                                  className="px-2 py-1 bg-amber-500/10 text-amber-400 rounded-full text-xs"
+                                >
+                                  {tech}
+                                </span>
+                              ))}
+                            </div>
+                            <span className="flex items-center gap-1 text-xs font-semibold text-amber-400 ml-2 shrink-0">
+                              {language === "pt" ? "Ver projetos" : "View projects"}
+                              <ArrowRight size={14} />
+                            </span>
+                          </div>
+                        </div>
+                      </motion.div>
+                    </Link>
+                  </motion.div>
+                );
+              }
+
+              return (
                 <motion.div
-                  className="rounded-xl overflow-hidden flex flex-col shadow-2xl bg-card"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                  key={project.id}
+                  className="pl-3 sm:pl-6 flex-shrink-0 w-[calc(100vw-2rem)] sm:w-[520px] h-auto cursor-pointer z-10"
+                  onClick={() => setSelectedProject(project)}
                 >
-                  <div className="relative h-46 bg-muted">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-3 sm:p-4 flex flex-col justify-between h-36">
-                    <div>
-                      <h3 className="text-lg sm:text-xl font-bold mb-1">
-                        {project.title}
-                      </h3>
-                      <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2">
-                        {project.description}
-                      </p>
+                  <motion.div
+                    className="rounded-xl overflow-hidden flex flex-col shadow-2xl bg-card"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <div className="relative h-46 bg-muted">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {project.technologies.map((tech, i) => (
-                        <span
-                          key={i}
-                          className="px-2 py-1 bg-amber-500/10 text-amber-400 rounded-full text-xs"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                    <div className="p-3 sm:p-4 flex flex-col justify-between h-36">
+                      <div>
+                        <h3 className="text-lg sm:text-xl font-bold mb-1">
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground text-xs sm:text-sm line-clamp-2">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {project.technologies.map((tech, i) => (
+                          <span
+                            key={i}
+                            className="px-2 py-1 bg-amber-500/10 text-amber-400 rounded-full text-xs"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
@@ -181,26 +241,36 @@ export default function Projects() {
                       href={selectedProject.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center sm:justify-start 
-                           gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg 
+                      className="inline-flex items-center justify-center sm:justify-start
+                           gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg
                            font-semibold hover:bg-amber-500/90 transition-all"
                     >
                       GitHub
                     </a>
                   )}
 
-                  {selectedProject.demo && (
-                    <a
-                      href={selectedProject.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center sm:justify-start 
-                           gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg 
-                           font-semibold hover:bg-amber-500/90 transition-all"
-                    >
-                      Demo
-                    </a>
-                  )}
+                  {selectedProject.demo &&
+                    (selectedProject.demo.startsWith("/") ? (
+                      <Link
+                        href={selectedProject.demo}
+                        className="inline-flex items-center justify-center sm:justify-start
+                             gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg
+                             font-semibold hover:bg-amber-500/90 transition-all"
+                      >
+                        Ver Projetos
+                      </Link>
+                    ) : (
+                      <a
+                        href={selectedProject.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center sm:justify-start
+                             gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg
+                             font-semibold hover:bg-amber-500/90 transition-all"
+                      >
+                        Demo
+                      </a>
+                    ))}
                 </div>
               </div>
             </div>

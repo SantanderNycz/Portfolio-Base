@@ -44,6 +44,11 @@ const skillBadges = [
     category: "frontend",
   },
   {
+    name: "Three.js",
+    badge: "https://skillicons.dev/icons?i=threejs",
+    category: "frontend",
+  },
+  {
     name: "Tailwind CSS",
     badge: "https://skillicons.dev/icons?i=tailwindcss",
     category: "frontend",
@@ -58,6 +63,11 @@ const skillBadges = [
   {
     name: "Express.js",
     badge: "https://skillicons.dev/icons?i=expressjs",
+    category: "backend",
+  },
+  {
+    name: "GraphQL",
+    badge: "https://skillicons.dev/icons?i=graphql",
     category: "backend",
   },
   {

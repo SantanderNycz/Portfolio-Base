@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Bikcraft",
+    "description": "Modern and responsive portfolio website with dark mode, JavaScript animations, and SEO-optimized structure.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
+    "github": "https://github.com/SantanderNycz/bikcraft",
+    "demo": "https://bikcraft-git-main-santandernyczs-projects.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Casa Santé",
+    "description": "Responsive website for Casa Santé, focused on wellness and health services with a clean and modern design.",
+    "image": "/placeholder.jpg",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/casa-sante",
+    "demo": "#"
+  },
+  {
+    "id": 3,
+    "title": "Dogs",
+    "description": "Social network for dog lovers with authentication, protected routes, photo galleries, and user profiles.",
+    "image": "/placeholder.jpg",
+    "technologies": ["React", "Vite", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/Dogs",
+    "demo": "https://dogs-socialnet.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Licittare",
+    "description": "Angular 17 implementation of the LicitaNow landing page, with animated hero, statistics counters, and category grid.",
+    "image": "/placeholder.jpg",
+    "technologies": ["Angular", "TypeScript", "CSS"],
+    "github": "https://github.com/SantanderNycz/Licittare",
+    "demo": "https://licittare-ff.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Duck Shop",
+    "description": "Functional e-commerce site with product catalog, interactive shopping cart, and GSAP-powered animations.",
+    "image": "/placeholder.jpg",
+    "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
+    "github": "https://github.com/SantanderNycz/duck-shop",
+    "demo": "https://duck-shop-vs.vercel.app/"
+  }
+]

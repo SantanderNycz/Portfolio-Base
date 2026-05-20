@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Green Loop",
+    "description": "Projeto do hackathon 'The Retail Hack' contra desperdício alimentar, com geolocalização e exibição de descontos.",
+    "image": "/greenloop.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS", "HTML"],
+    "github": "https://github.com/SantanderNycz/GreenLoop",
+    "demo": "https://green-loop-six.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Bloco de Notas",
+    "description": "App de notas com suporte a registros em texto e áudio, com persistência de dados e interface intuitiva.",
+    "image": "/Notes.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/nlw-expert-notes",
+    "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "Party Time",
+    "description": "Aplicação full-stack para gestão de eventos com front-end em React e back-end em Node.js/MongoDB via API REST.",
+    "image": "/party-time.png",
+    "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
+    "github": "https://github.com/SantanderNycz/api-partytime-front",
+    "demo": "https://api-partytime-front.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Aplicativo de Orçamento",
+    "description": "Sistema de geração de orçamentos para as lojas Stock Som e Stock Music, com atualização automática de datas e impressão.",
+    "image": "/order.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS"],
+    "github": "https://github.com/SantanderNycz/App-Orcamento",
+    "demo": "https://app-orcamento-lyart.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Fokus",
+    "description": "Aplicativo de produtividade baseado na técnica Pomodoro, com gerenciamento de tarefas e controle de ciclos de foco.",
+    "image": "/fokus.png",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "github": "https://github.com/SantanderNycz/fokus",
+    "demo": "https://fokus-xi-eight.vercel.app/"
+  },
+  {
+    "id": 6,
+    "title": "Encriptador",
+    "description": "App de criptografia e descriptografia de textos — transforme mensagens com segurança e copie os resultados automaticamente.",
+    "image": "/decoder.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Decode",
+    "demo": "https://decode-sand-three.vercel.app/"
+  }
+]

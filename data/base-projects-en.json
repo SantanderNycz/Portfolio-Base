@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Green Loop",
+    "description": "Hackathon project 'The Retail Hack' against food waste, using geolocation and discount display.",
+    "image": "/greenloop.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS", "HTML"],
+    "github": "https://github.com/SantanderNycz/GreenLoop",
+    "demo": "https://green-loop-six.vercel.app/"
+  },
+  {
+    "id": 2,
+    "title": "Notes App",
+    "description": "A note-taking app with TypeScript/JS support for text or audio notes with data persistence.",
+    "image": "/Notes.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/nlw-expert-notes",
+    "demo": "https://nlw-expert-notes-five-pi.vercel.app/"
+  },
+  {
+    "id": 3,
+    "title": "Party Time",
+    "description": "Full-stack event management app with React front-end and Node.js/MongoDB back-end via REST API.",
+    "image": "/party-time.png",
+    "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
+    "github": "https://github.com/SantanderNycz/api-partytime-front",
+    "demo": "https://api-partytime-front.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Budget App",
+    "description": "Custom budget generation system for Stock Som and Stock Music stores, with automatic date updates and print.",
+    "image": "/order.png",
+    "technologies": ["JavaScript", "TypeScript", "CSS"],
+    "github": "https://github.com/SantanderNycz/App-Orcamento",
+    "demo": "https://app-orcamento-lyart.vercel.app/"
+  },
+  {
+    "id": 5,
+    "title": "Fokus",
+    "description": "Productivity app based on the Pomodoro technique, with task management and focus cycle tracking.",
+    "image": "/fokus.png",
+    "technologies": ["JavaScript", "HTML", "CSS"],
+    "github": "https://github.com/SantanderNycz/fokus",
+    "demo": "https://fokus-xi-eight.vercel.app/"
+  },
+  {
+    "id": 6,
+    "title": "Encryptor",
+    "description": "Text encryption and decryption app — transform messages securely and copy results automatically.",
+    "image": "/decoder.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/Decode",
+    "demo": "https://decode-sand-three.vercel.app/"
+  }
+]
