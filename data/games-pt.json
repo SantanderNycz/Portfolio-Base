@@ -21,7 +21,7 @@
     "id": 3,
     "title": "The Files",
     "description": "Um jogo de detetive ambientado no Departamento de Polícia do Porto, criado com React e TypeScript.",
-    "image": "/placeholder.jpg",
+    "image": "/the-files.png",
     "technologies": ["React", "TypeScript", "Vite"],
     "github": "https://github.com/SantanderNycz/the-files",
     "demo": "https://the-files-vs.vercel.app/"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "The Audition",
     "description": "Uma experiência de jogo web interativa desenvolvida com TypeScript, JavaScript e Tailwind CSS.",
-    "image": "/placeholder.jpg",
+    "image": "/the-audition.png",
     "technologies": ["TypeScript", "JavaScript", "TailwindCSS"],
     "github": "https://github.com/SantanderNycz/the-audition",
     "demo": "https://the-audition.vercel.app"
