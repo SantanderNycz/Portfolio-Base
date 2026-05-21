@@ -1,13 +1,12 @@
 [
   {
-    "id": 2,
-    "title": "Sandlerflix",
-    "description": "Um projeto focado única e totalmente no Adam Sandler.",
-    "longDescription": "Projeto frontend responsivo dedicado exclusivamente à filmografia de Adam Sandler, com layout adaptável a múltiplos dispositivos, organização dinâmica de conteúdo e foco em performance e usabilidade.",
-    "image": "/Sandlerflix.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/SantanderNycz/sandlerflix",
-    "demo": "https://sandlerflix.vercel.app/"
+    "id": 22,
+    "title": "Sites",
+    "description": "Sites e landing pages responsivos com foco em design, UX e boas práticas de desenvolvimento.",
+    "longDescription": "Uma coleção de sites e landing pages: Bikcraft, Casa Santé, Dogs (rede social em React), Licittare (landing page em Angular) e Duck Shop (e-commerce com animações GSAP) — todos com foco em design responsivo e acessível.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "Angular", "React"],
+    "demo": "/sites"
   },
   {
     "id": 3,
@@ -20,6 +19,25 @@
     "demo": "/projetos-42"
   },
   {
+    "id": 20,
+    "title": "Jogos",
+    "description": "Jogos interativos e experiências no browser — Pong com IA, puzzles de detetive, aventuras com Canvas e mais.",
+    "longDescription": "Uma coleção de jogos para browser e experiências interativas: Eri Pongson (Pong com IA), Jogo do Número Secreto, The Files (thriller de detetive), The Audition e So_Long v3 (port em Canvas do projeto da 42 Porto).",
+    "image": "/Pongson.png",
+    "technologies": ["JavaScript", "TypeScript", "Canvas API", "React"],
+    "demo": "/jogos"
+  },
+  {
+    "id": 2,
+    "title": "Sandlerflix",
+    "description": "Um projeto focado única e totalmente no Adam Sandler.",
+    "longDescription": "Projeto frontend responsivo dedicado exclusivamente à filmografia de Adam Sandler, com layout adaptável a múltiplos dispositivos, organização dinâmica de conteúdo e foco em performance e usabilidade.",
+    "image": "/Sandlerflix.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/sandlerflix",
+    "demo": "https://sandlerflix.vercel.app/"
+  },
+  {
     "id": 5,
     "title": "BeanBase",
     "description": "BeanBase é uma rede social para amantes de café: compartilhe suas experiências, descubra novos cafés e conecte-se com a comunidade.",
@@ -28,6 +46,26 @@
     "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
     "github": "https://github.com/SantanderNycz/BeanBase",
     "demo": "https://beanbase.up.railway.app/"
+  },
+  {
+    "id": 15,
+    "title": "Schedully",
+    "description": "Plataforma SaaS de agendamento multi-tenant com autenticação por funções, integração Stripe e Drizzle ORM.",
+    "longDescription": "Schedully é uma aplicação SaaS de agendamento multi-tenant criada com React, Node.js, PostgreSQL e Stripe. Apresenta autenticação com funções, arquitetura de dados multi-tenant, schema relacional com Drizzle ORM, rotas protegidas, estado global com Zustand e validação de formulários com React Hook Form + Zod.",
+    "image": "/schedully.png",
+    "technologies": ["React", "Node.JS", "PostgreSQL", "Stripe", "Drizzle ORM"],
+    "github": "https://github.com/SantanderNycz/schedully-front",
+    "demo": "https://schedully-front.vercel.app/login"
+  },
+  {
+    "id": 14,
+    "title": "Strata",
+    "description": "Aplicação web 3D interativa para design e simulação de padrões de perfuração industrial e sequências de detonação.",
+    "longDescription": "Strata é uma ferramenta de visualização 3D interativa criada com React e Three.js, permitindo que engenheiros e designers planejem, visualizem e simulem padrões de perfuração industrial e sequências de detonação em tempo real. Conta com backend em Node.js para processamento de dados.",
+    "image": "/strata.png",
+    "technologies": ["React", "Three.js", "Node.JS", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/strata",
+    "demo": "https://strata-vs.vercel.app/"
   },
   {
     "id": 6,
@@ -47,25 +85,6 @@
     "demo": "https://spotify-clone-sandy-nine.vercel.app/"
   },
   {
-    "id": 14,
-    "title": "Strata",
-    "description": "Aplicação web 3D interativa para design e simulação de padrões de perfuração industrial e sequências de detonação.",
-    "longDescription": "Strata é uma ferramenta de visualização 3D interativa criada com React e Three.js, permitindo que engenheiros e designers planejem, visualizem e simulem padrões de perfuração industrial e sequências de detonação em tempo real. Conta com backend em Node.js para processamento de dados.",
-    "image": "/placeholder.jpg",
-    "technologies": ["React", "Three.js", "Node.JS", "TypeScript"],
-    "github": "https://github.com/SantanderNycz/strata",
-    "demo": "https://strata-vs.vercel.app/"
-  },
-  {
-    "id": 20,
-    "title": "Jogos",
-    "description": "Jogos interativos e experiências no browser — Pong com IA, puzzles de detetive, aventuras com Canvas e mais.",
-    "longDescription": "Uma coleção de jogos para browser e experiências interativas: Eri Pongson (Pong com IA), Jogo do Número Secreto, The Files (thriller de detetive), The Audition e So_Long v3 (port em Canvas do projeto da 42 Porto).",
-    "image": "/Pongson.png",
-    "technologies": ["JavaScript", "TypeScript", "Canvas API", "React"],
-    "demo": "/jogos"
-  },
-  {
     "id": 21,
     "title": "Projetos Base",
     "description": "Projetos fundamentais cobrindo JS, React, Node.js e os fundamentos do desenvolvimento full-stack.",
@@ -73,14 +92,5 @@
     "image": "/fokus.png",
     "technologies": ["JavaScript", "React", "Node.JS", "TypeScript"],
     "demo": "/projetos-base"
-  },
-  {
-    "id": 22,
-    "title": "Sites",
-    "description": "Sites e landing pages responsivos com foco em design, UX e boas práticas de desenvolvimento.",
-    "longDescription": "Uma coleção de sites e landing pages: Bikcraft, Casa Santé, Dogs (rede social em React), Licittare (landing page em Angular) e Duck Shop (e-commerce com animações GSAP) — todos com foco em design responsivo e acessível.",
-    "image": "/bikcraft.png",
-    "technologies": ["HTML", "CSS", "JavaScript", "Angular", "React"],
-    "demo": "/sites"
   }
 ]

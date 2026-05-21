@@ -1,13 +1,12 @@
 [
   {
-    "id": 2,
-    "title": "Sandlerflix",
-    "description": "A project fully dedicated to Adam Sandler.",
-    "longDescription": "Responsive frontend project dedicated exclusively to Adam Sandler's filmography, with adaptable layout for multiple devices, dynamic content organization, and focus on performance and usability.",
-    "image": "/Sandlerflix.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "github": "https://github.com/SantanderNycz/sandlerflix",
-    "demo": "https://sandlerflix.vercel.app/"
+    "id": 22,
+    "title": "Websites",
+    "description": "Responsive websites and landing pages with focus on design, UX and best development practices.",
+    "longDescription": "A collection of websites and landing pages: Bikcraft, Casa Santé, Dogs (React social network), Licittare (Angular landing page), and Duck Shop (e-commerce with GSAP animations) — all focused on responsive, accessible design.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "Angular", "React"],
+    "demo": "/sites"
   },
   {
     "id": 3,
@@ -20,6 +19,25 @@
     "demo": "/projetos-42"
   },
   {
+    "id": 20,
+    "title": "Games",
+    "description": "Interactive games and experiences — Pong with AI, detective puzzles, Canvas-based adventures and more.",
+    "longDescription": "A collection of browser games and interactive experiences: Eri Pongson (Pong with AI), Secret Number Game, The Files (detective thriller), The Audition, and So_Long v3 (Canvas port of the 42 Porto project).",
+    "image": "/Pongson.png",
+    "technologies": ["JavaScript", "TypeScript", "Canvas API", "React"],
+    "demo": "/jogos"
+  },
+  {
+    "id": 2,
+    "title": "Sandlerflix",
+    "description": "A project fully dedicated to Adam Sandler.",
+    "longDescription": "Responsive frontend project dedicated exclusively to Adam Sandler's filmography, with adaptable layout for multiple devices, dynamic content organization, and focus on performance and usability.",
+    "image": "/Sandlerflix.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/SantanderNycz/sandlerflix",
+    "demo": "https://sandlerflix.vercel.app/"
+  },
+  {
     "id": 5,
     "title": "BeanBase",
     "description": "BeanBase is a social network for coffee lovers: share your experiences, discover new cafes, and connect with the community.",
@@ -28,6 +46,26 @@
     "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
     "github": "https://github.com/SantanderNycz/BeanBase",
     "demo": "https://beanbase.up.railway.app/"
+  },
+  {
+    "id": 15,
+    "title": "Schedully",
+    "description": "Multi-tenant SaaS scheduling platform with role-based auth, Stripe integration and Drizzle ORM.",
+    "longDescription": "Schedully is a multi-tenant SaaS scheduling application built with React, Node.js, PostgreSQL and Stripe. Features authentication with roles, multi-tenant data architecture, relational schema with Drizzle ORM, protected routes, global state with Zustand, and form validation with React Hook Form + Zod.",
+    "image": "/schedully.png",
+    "technologies": ["React", "Node.JS", "PostgreSQL", "Stripe", "Drizzle ORM"],
+    "github": "https://github.com/SantanderNycz/schedully-front",
+    "demo": "https://schedully-front.vercel.app/login"
+  },
+  {
+    "id": 14,
+    "title": "Strata",
+    "description": "Interactive 3D web application for designing and simulating industrial drilling patterns and blast sequences.",
+    "longDescription": "Strata is an interactive 3D visualization tool built with React and Three.js, allowing engineers and designers to plan, visualize, and simulate industrial drilling patterns and blast sequences in real time. Features a Node.js backend for data processing.",
+    "image": "/strata.png",
+    "technologies": ["React", "Three.js", "Node.JS", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/strata",
+    "demo": "https://strata-vs.vercel.app/"
   },
   {
     "id": 6,
@@ -47,25 +85,6 @@
     "demo": "https://spotify-clone-sandy-nine.vercel.app/"
   },
   {
-    "id": 14,
-    "title": "Strata",
-    "description": "Interactive 3D web application for designing and simulating industrial drilling patterns and blast sequences.",
-    "longDescription": "Strata is an interactive 3D visualization tool built with React and Three.js, allowing engineers and designers to plan, visualize, and simulate industrial drilling patterns and blast sequences in real time. Features a Node.js backend for data processing.",
-    "image": "/placeholder.jpg",
-    "technologies": ["React", "Three.js", "Node.JS", "TypeScript"],
-    "github": "https://github.com/SantanderNycz/strata",
-    "demo": "https://strata-vs.vercel.app/"
-  },
-  {
-    "id": 20,
-    "title": "Games",
-    "description": "Interactive games and experiences — Pong with AI, detective puzzles, Canvas-based adventures and more.",
-    "longDescription": "A collection of browser games and interactive experiences: Eri Pongson (Pong with AI), Secret Number Game, The Files (detective thriller), The Audition, and So_Long v3 (Canvas port of the 42 Porto project).",
-    "image": "/Pongson.png",
-    "technologies": ["JavaScript", "TypeScript", "Canvas API", "React"],
-    "demo": "/jogos"
-  },
-  {
     "id": 21,
     "title": "Base Projects",
     "description": "Foundational projects covering JS, React, Node.js and full-stack development fundamentals.",
@@ -73,14 +92,5 @@
     "image": "/fokus.png",
     "technologies": ["JavaScript", "React", "Node.JS", "TypeScript"],
     "demo": "/projetos-base"
-  },
-  {
-    "id": 22,
-    "title": "Websites",
-    "description": "Responsive websites and landing pages with focus on design, UX and best development practices.",
-    "longDescription": "A collection of websites and landing pages: Bikcraft, Casa Santé, Dogs (React social network), Licittare (Angular landing page), and Duck Shop (e-commerce with GSAP animations) — all focused on responsive, accessible design.",
-    "image": "/bikcraft.png",
-    "technologies": ["HTML", "CSS", "JavaScript", "Angular", "React"],
-    "demo": "/sites"
   }
 ]
