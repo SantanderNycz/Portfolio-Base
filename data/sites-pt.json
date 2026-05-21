@@ -15,7 +15,7 @@
     "image": "/casa-sante.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/SantanderNycz/casa-sante",
-    "demo": "#"
+    "demo": "https://casa-sante.vercel.app/"
   },
   {
     "id": 3,
