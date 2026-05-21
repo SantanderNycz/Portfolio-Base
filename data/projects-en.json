@@ -52,7 +52,7 @@
     "title": "Schedully",
     "description": "Multi-tenant SaaS scheduling platform with role-based auth, Stripe integration and Drizzle ORM.",
     "longDescription": "Schedully is a multi-tenant SaaS scheduling application built with React, Node.js, PostgreSQL and Stripe. Features authentication with roles, multi-tenant data architecture, relational schema with Drizzle ORM, protected routes, global state with Zustand, and form validation with React Hook Form + Zod.",
-    "image": "/schedully.png",
+    "image": "/Schedully.png",
     "technologies": ["React", "Node.JS", "PostgreSQL", "Stripe", "Drizzle ORM"],
     "github": "https://github.com/SantanderNycz/schedully-front",
     "demo": "https://schedully-front.vercel.app/login"
