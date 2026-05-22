@@ -45,7 +45,7 @@
     "image": "/beanbase.png",
     "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
     "github": "https://github.com/SantanderNycz/BeanBase",
-    "demo": "https://beanbase.up.railway.app/"
+    "demo": "https://beanbase.onrender.com/"
   },
   {
     "id": 15,
