@@ -92,7 +92,7 @@ export default function Projects() {
                             {language === "pt" ? "Coleção de Projetos" : "Project Collection"}
                           </span>
                         </div>
-                        <div className="p-3 sm:p-4 flex flex-col justify-between h-36">
+                        <div className="p-3 sm:p-4 flex flex-col justify-between min-h-[9rem]">
                           <div>
                             <h3 className="text-lg sm:text-xl font-bold mb-1">
                               {project.title}
@@ -142,7 +142,7 @@ export default function Projects() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="p-3 sm:p-4 flex flex-col justify-between h-36">
+                    <div className="p-3 sm:p-4 flex flex-col justify-between min-h-[9rem]">
                       <div>
                         <h3 className="text-lg sm:text-xl font-bold mb-1">
                           {project.title}
