@@ -357,7 +357,7 @@ export default function Skills() {
                 {labels[currentCategory as keyof typeof labels]}
               </h3>
 
-              <div className="flex flex-wrap justify-center gap-8 h-32">
+              <div className="flex flex-wrap justify-center gap-8 min-h-[8rem] pb-4">
                 {currentSkills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
