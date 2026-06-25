@@ -13,7 +13,7 @@ interface SubPageCardProps {
   description: string;
   image: string;
   technologies: string[];
-  github: string;
+  github?: string;
   demo: string;
 }
 
@@ -64,15 +64,17 @@ export function SubPageCard({
             Em breve
           </Button>
         )}
-        <Button
-          asChild
-          variant="outline"
-          className="bg-white hover:bg-zinc-300"
-        >
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <img src="/github.png" alt="GitHub" className="w-6 h-6" />
-          </a>
-        </Button>
+        {github && (
+          <Button
+            asChild
+            variant="outline"
+            className="bg-white hover:bg-zinc-300"
+          >
+            <a href={github} target="_blank" rel="noopener noreferrer">
+              <img src="/github.png" alt="GitHub" className="w-6 h-6" />
+            </a>
+          </Button>
+        )}
       </CardFooter>
     </Card>
   );

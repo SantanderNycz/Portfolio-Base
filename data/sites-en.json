@@ -43,5 +43,13 @@
     "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
     "github": "https://github.com/SantanderNycz/duck-shop",
     "demo": "https://duck-shop-vs.vercel.app/"
+  },
+  {
+    "id": 6,
+    "title": "Fernanda Garcia Academy",
+    "description": "Educational platform for beauty professionals offering training in lash lifting, brow lamination, and eyebrow design.",
+    "image": "/fernanda-garcia.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "demo": "https://fernandagarciaacademy.com/"
   }
 ]

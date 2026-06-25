@@ -3,7 +3,7 @@
     "id": 22,
     "title": "Sites",
     "description": "Sites e landing pages responsivos com foco em design, UX e boas práticas de desenvolvimento.",
-    "longDescription": "Uma coleção de sites e landing pages: Bikcraft, Casa Santé, Dogs (rede social em React), Licittare (landing page em Angular) e Duck Shop (e-commerce com animações GSAP) — todos com foco em design responsivo e acessível.",
+    "longDescription": "Uma coleção de sites e landing pages: Bikcraft, Casa Santé, Dogs (rede social em React), Licittare (landing page em Angular), Duck Shop (e-commerce com animações GSAP) e Fernanda Garcia Academy (plataforma educacional de beleza) — todos com foco em design responsivo e acessível.",
     "image": "/bikcraft.png",
     "technologies": ["HTML", "CSS", "JavaScript", "Angular", "React"],
     "demo": "/sites"
