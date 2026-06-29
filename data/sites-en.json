@@ -1,15 +1,6 @@
 [
   {
     "id": 1,
-    "title": "Bikcraft",
-    "description": "Modern and responsive portfolio website with dark mode, JavaScript animations, and SEO-optimized structure.",
-    "image": "/bikcraft.png",
-    "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
-    "github": "https://github.com/SantanderNycz/bikcraft",
-    "demo": "https://bikcraft-git-main-santandernyczs-projects.vercel.app/"
-  },
-  {
-    "id": 2,
     "title": "Casa Santé",
     "description": "Responsive website for Casa Santé, focused on wellness and health services with a clean and modern design.",
     "image": "/casa-sante.png",
@@ -18,7 +9,32 @@
     "demo": "https://casa-sante.vercel.app/"
   },
   {
+    "id": 2,
+    "title": "Fernanda Garcia Academy",
+    "description": "Educational platform for beauty professionals offering training in lash lifting, brow lamination, and eyebrow design.",
+    "image": "/fernanda-garcia.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "demo": "https://fernandagarciaacademy.com/"
+  },
+  {
     "id": 3,
+    "title": "VOID Studio",
+    "description": "Digital studio website from Porto with a bold visual identity, showcasing services and creative work.",
+    "image": "/void.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "demo": "https://void-studio-vs.vercel.app/"
+  },
+  {
+    "id": 4,
+    "title": "Bikcraft",
+    "description": "Modern and responsive portfolio website with dark mode, JavaScript animations, and SEO-optimized structure.",
+    "image": "/bikcraft.png",
+    "technologies": ["HTML", "CSS", "JavaScript", "PHP"],
+    "github": "https://github.com/SantanderNycz/bikcraft",
+    "demo": "https://bikcraft-git-main-santandernyczs-projects.vercel.app/"
+  },
+  {
+    "id": 5,
     "title": "Dogs",
     "description": "Social network for dog lovers with authentication, protected routes, photo galleries, and user profiles.",
     "image": "/dogs.png",
@@ -27,7 +43,7 @@
     "demo": "https://dogs-socialnet.vercel.app/"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Licittare",
     "description": "Angular 17 implementation of the LicitaNow landing page, with animated hero, statistics counters, and category grid.",
     "image": "/licittare.png",
@@ -36,28 +52,12 @@
     "demo": "https://licittare-ff.vercel.app/"
   },
   {
-    "id": 5,
+    "id": 7,
     "title": "Duck Shop",
     "description": "Functional e-commerce site with product catalog, interactive shopping cart, and GSAP-powered animations.",
     "image": "/duck-shop.png",
     "technologies": ["HTML", "CSS", "JavaScript", "GSAP"],
     "github": "https://github.com/SantanderNycz/duck-shop",
     "demo": "https://duck-shop-vs.vercel.app/"
-  },
-  {
-    "id": 6,
-    "title": "Fernanda Garcia Academy",
-    "description": "Educational platform for beauty professionals offering training in lash lifting, brow lamination, and eyebrow design.",
-    "image": "/fernanda-garcia.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "demo": "https://fernandagarciaacademy.com/"
-  },
-  {
-    "id": 7,
-    "title": "VOID Studio",
-    "description": "Digital studio website from Porto with a bold visual identity, showcasing services and creative work.",
-    "image": "/void-studio.png",
-    "technologies": ["HTML", "CSS", "JavaScript"],
-    "demo": "https://void-studio-vs.vercel.app/"
   }
 ]
