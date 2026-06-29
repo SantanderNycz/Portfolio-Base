@@ -7,7 +7,8 @@
       "WebFetch(domain:the-audition.vercel.app)",
       "mcp__Claude_Preview__preview_start",
       "mcp__Claude_in_Chrome__list_connected_browsers",
-      "WebFetch(domain:fernandagarciaacademy.com)"
+      "WebFetch(domain:fernandagarciaacademy.com)",
+      "WebFetch(domain:void-studio-vs.vercel.app)"
     ]
   }
 }

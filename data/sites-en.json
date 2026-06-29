@@ -51,5 +51,13 @@
     "image": "/fernanda-garcia.png",
     "technologies": ["HTML", "CSS", "JavaScript"],
     "demo": "https://fernandagarciaacademy.com/"
+  },
+  {
+    "id": 7,
+    "title": "VOID Studio",
+    "description": "Digital studio website from Porto with a bold visual identity, showcasing services and creative work.",
+    "image": "/void-studio.png",
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "demo": "https://void-studio-vs.vercel.app/"
   }
 ]
