@@ -2,7 +2,7 @@
   {
     "id": 100,
     "title": "Miradouro",
-    "description": "Multi-language web platform with authentication, supporting 5 languages (PT-PT, PT-BR, EN, ES, FR). Modern dark-themed interface with refined design and intuitive user experience.",
+    "description": "Multi-language web platform with authentication, supporting 5 languages. Modern dark-themed interface with refined design and intuitive user experience.",
     "image": "/miradouro.png",
     "technologies": ["Next.js", "TypeScript", "TailwindCSS"],
     "github": "https://github.com/SantanderNycz/Miradouro-2.0",

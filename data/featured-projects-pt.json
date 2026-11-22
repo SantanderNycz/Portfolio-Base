@@ -2,7 +2,7 @@
   {
     "id": 100,
     "title": "Miradouro",
-    "description": "Plataforma web multi-idioma com autenticação e suporte a 5 idiomas (PT-PT, PT-BR, EN, ES, FR). Interface moderna com tema escuro, design refinado e experiência de utilizador intuitiva.",
+    "description": "Plataforma web multi-idioma com autenticação e suporte a 5 idiomas. Interface moderna com tema escuro, design refinado e experiência de utilizador intuitiva.",
     "image": "/miradouro.png",
     "technologies": ["Next.js", "TypeScript", "TailwindCSS"],
     "github": "https://github.com/SantanderNycz/Miradouro-2.0",
