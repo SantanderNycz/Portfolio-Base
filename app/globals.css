@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Montserrat, sans-serif;
-}
-
 @font-face {
   font-family: "Orkney Regular";
   src: url("/fonts/Orkney Regular.woff2") format("woff2");

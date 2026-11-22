@@ -1,0 +1,38 @@
+[
+  {
+    "id": 100,
+    "title": "Miradouro",
+    "description": "Multi-language web platform with authentication, supporting 5 languages (PT-PT, PT-BR, EN, ES, FR). Modern dark-themed interface with refined design and intuitive user experience.",
+    "image": "/miradouro.png",
+    "technologies": ["Next.js", "TypeScript", "TailwindCSS"],
+    "github": "https://github.com/SantanderNycz/Miradouro-2.0",
+    "demo": "https://miradouro.vercel.app/"
+  },
+  {
+    "id": 14,
+    "title": "Strata",
+    "description": "Interactive 3D web application for designing and simulating industrial drilling patterns and blast sequences in real time.",
+    "image": "/strata.png",
+    "technologies": ["React", "Three.js", "Node.JS", "TypeScript"],
+    "github": "https://github.com/SantanderNycz/strata",
+    "demo": "https://strata-vs.vercel.app/"
+  },
+  {
+    "id": 15,
+    "title": "Schedully",
+    "description": "Multi-tenant SaaS scheduling platform with role-based authentication, Stripe integration and Drizzle ORM.",
+    "image": "/Schedully.png",
+    "technologies": ["React", "Node.JS", "PostgreSQL", "Stripe", "Drizzle ORM"],
+    "github": "https://github.com/SantanderNycz/schedully-front",
+    "demo": "https://schedully-front.vercel.app/login"
+  },
+  {
+    "id": 5,
+    "title": "BeanBase",
+    "description": "Full-stack social network for coffee lovers: share your experiences, discover new cafes, and connect with the community.",
+    "image": "/beanbase.png",
+    "technologies": ["React", "Vite", "Node.JS", "Express.js", "MongoDB"],
+    "github": "https://github.com/SantanderNycz/BeanBase",
+    "demo": "https://beanbase.onrender.com/"
+  }
+]

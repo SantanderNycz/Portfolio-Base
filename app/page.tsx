@@ -1,5 +1,6 @@
 import Hero from "@/components/hero";
 import About from "@/components/about";
+import FeaturedProjects from "@/components/FeaturedProjects";
 import Projects from "@/components/projects";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="relative min-h-screen text-zinc-100">
       <Hero />
       <About />
+      <FeaturedProjects />
       <Projects />
       <Skills />
       <Contact />

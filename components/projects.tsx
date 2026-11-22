@@ -221,7 +221,7 @@ export default function Projects() {
                 </p>
 
                 <h4 className="font-semibold mb-3 text-amber-400">
-                  Technologies Used:
+                  {language === "pt" ? "Tecnologias utilizadas:" : "Technologies Used:"}
                 </h4>
 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -257,7 +257,7 @@ export default function Projects() {
                              gap-2 px-6 py-3 bg-amber-600/90 text-white rounded-lg
                              font-semibold hover:bg-amber-500/90 transition-all"
                       >
-                        Ver Projetos
+                        {language === "pt" ? "Ver Projetos" : "View Projects"}
                       </Link>
                     ) : (
                       <a

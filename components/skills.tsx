@@ -395,7 +395,7 @@ export default function Skills() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -4 }}
                           transition={{ duration: 0.15 }}
-                          className="text-xs font-semibold text-retroYellow absolute top-11 whitespace-nowrap"
+                          className="text-xs font-semibold text-amber-400 absolute top-11 whitespace-nowrap"
                         >
                           {skill.name}
                         </motion.p>
