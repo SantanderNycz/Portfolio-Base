@@ -24,7 +24,7 @@
     "image": "/Schedully.png",
     "technologies": ["React", "Node.JS", "PostgreSQL", "Stripe", "Drizzle ORM"],
     "github": "https://github.com/SantanderNycz/schedully-front",
-    "demo": "https://schedully-front.vercel.app/login"
+    "demo": "https://schedully-front.vercel.app/"
   },
   {
     "id": 5,
