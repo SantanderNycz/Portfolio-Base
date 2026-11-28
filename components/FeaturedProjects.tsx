@@ -145,13 +145,13 @@ export default function FeaturedProjects() {
   return (
     <section
       id="featured-projects"
-      className="py-20 px-4 overflow-hidden relative z-[49]"
+      className="py-20 overflow-hidden relative z-[49]"
       style={{
         background:
           "linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27,0.6), rgba(24,24,27,0.6), rgba(24,24,27,0))",
       }}
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="max-w-7xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

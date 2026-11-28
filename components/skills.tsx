@@ -227,7 +227,7 @@ const iconVariants = {
   hidden: { opacity: 0, scale: 0.6, y: 10 },
   visible: (i: number) => ({
     opacity: 1,
-    scale: 1.4,
+    scale: 1,
     y: 0,
     transition: { duration: 0.25, delay: i * 0.015, ease: "backOut" },
   }),
@@ -282,13 +282,13 @@ export default function Skills() {
       whileInView={{ opacity: 0.98 }}
       transition={{ duration: 1.2 }}
       viewport={{ once: true }}
-      className="py-10 px-4 overflow-hidden relative z-[48]"
+      className="py-10 overflow-hidden relative z-[48]"
       style={{
         background:
           "linear-gradient(to bottom, rgba(24,24,27,0), rgba(24,24,27,0.1), rgba(24,24,27,0.45), rgba(24,24,27,0.65), rgba(24,24,27,0.45), rgba(24,24,27,0.1), rgba(24,24,27,0))",
       }}
     >
-      <div className="container mx-auto max-w-6xl text-center mt-10">
+      <div className="max-w-7xl mx-auto px-4 text-center mt-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -366,16 +366,16 @@ export default function Skills() {
                     initial="hidden"
                     animate="visible"
                     whileHover={{ scale: 1.7, y: -5 }}
-                    className="badge-animate flex flex-col items-center h-20 relative"
+                    className="badge-animate flex flex-col items-center h-24 relative"
                     onMouseEnter={() => setHoveredSkill(skill.name)}
                     onMouseLeave={() => setHoveredSkill(null)}
                   >
                     {skill.skilliconsStyle ? (
-                      <div className="w-10 h-10 bg-slate-50 dark:bg-darkblue dark:border-zinc-700 rounded-lg flex items-center justify-center transition-all duration-200">
+                      <div className="w-12 h-12 bg-slate-50 dark:bg-darkblue dark:border-zinc-700 rounded-lg flex items-center justify-center transition-all duration-200">
                         <img
                           src={skill.badge}
                           alt={skill.name}
-                          className="w-[34px] h-[34px] object-contain"
+                          className="w-[40px] h-[40px] object-contain"
                           loading="eager"
                         />
                       </div>
@@ -383,7 +383,7 @@ export default function Skills() {
                       <img
                         src={skill.badge}
                         alt={skill.name}
-                        className="h-10 w-10 object-contain transition-all duration-300 hover:drop-shadow-lg"
+                        className="h-12 w-12 object-contain transition-all duration-300 hover:drop-shadow-lg"
                         loading="eager"
                       />
                     )}
@@ -395,7 +395,7 @@ export default function Skills() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -4 }}
                           transition={{ duration: 0.15 }}
-                          className="text-xs font-semibold text-amber-400 absolute top-11 whitespace-nowrap"
+                          className="text-xs font-semibold text-amber-400 absolute top-14 whitespace-nowrap"
                         >
                           {skill.name}
                         </motion.p>

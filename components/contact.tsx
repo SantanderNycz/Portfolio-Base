@@ -56,10 +56,10 @@ export default function Contact() {
         setSubmitSuccess(true);
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        setSubmitError("Erro ao enviar. Tenta novamente mais tarde.");
+        setSubmitError(language === "pt" ? "Erro ao enviar. Tenta novamente mais tarde." : "Failed to send. Please try again later.");
       }
     } catch {
-      setSubmitError("Erro de conexão. Verifica tua internet.");
+      setSubmitError(language === "pt" ? "Erro de conexão. Verifica tua internet." : "Connection error. Check your internet.");
     } finally {
       setIsSubmitting(false);
     }
@@ -102,7 +102,7 @@ export default function Contact() {
       transition={{ duration: 1.2, ease: "easeOut" }}
       className="py-24 overflow-hidden relative z-[48]"
     >
-      <div className="container mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4">
 
         {/* Header */}
         <motion.div
@@ -177,7 +177,7 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div className="flex flex-col gap-2">
                     <label className="text-zinc-500 text-xs tracking-widest uppercase">
-                      {t("contact.namePlaceholder")}
+                      {t("contact.name")}
                     </label>
                     <input
                       type="text"
@@ -192,7 +192,7 @@ export default function Contact() {
                   </div>
                   <div className="flex flex-col gap-2">
                     <label className="text-zinc-500 text-xs tracking-widest uppercase">
-                      {t("contact.emailPlaceholder")}
+                      {t("contact.email")}
                     </label>
                     <input
                       type="email"
@@ -224,7 +224,7 @@ export default function Contact() {
 
                 <div className="flex flex-col gap-2">
                   <label className="text-zinc-500 text-xs tracking-widest uppercase">
-                    {t("contact.messagePlaceholder")}
+                    {t("contact.message")}
                   </label>
                   <textarea
                     name="message"

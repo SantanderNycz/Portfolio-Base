@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -7,6 +9,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import Image from "next/image";
+import { useLanguage } from "@/contexts/language-context";
 
 interface SubPageCardProps {
   title: string;
@@ -25,13 +29,16 @@ export function SubPageCard({
   github,
   demo,
 }: SubPageCardProps) {
+  const { language } = useLanguage();
+
   return (
     <Card className="flex flex-col h-full border-border/50 bg-card/50 backdrop-blur-sm hover:border-amber-400/50 transition-colors overflow-hidden">
       <div className="relative h-48 bg-muted overflow-hidden">
-        <img
+        <Image
           src={image}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          fill
+          className="object-cover transition-transform duration-300 hover:scale-105"
         />
       </div>
       <CardHeader className="pb-2">
@@ -61,17 +68,17 @@ export function SubPageCard({
         ) : (
           <Button disabled className="flex-1 bg-amber-600/40 text-white/60 cursor-not-allowed">
             <ExternalLink className="w-4 h-4 mr-2" />
-            Em breve
+            {language === "pt" ? "Em breve" : "Coming soon"}
           </Button>
         )}
         {github && (
           <Button
             asChild
             variant="outline"
-            className="bg-white hover:bg-zinc-300"
+            className="bg-zinc-800 hover:bg-zinc-700 border-zinc-700"
           >
             <a href={github} target="_blank" rel="noopener noreferrer">
-              <img src="/github.png" alt="GitHub" className="w-6 h-6" />
+              <Image src="/github-white.svg" alt="GitHub" width={24} height={24} className="w-6 h-6" />
             </a>
           </Button>
         )}

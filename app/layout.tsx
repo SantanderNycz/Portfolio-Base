@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/contexts/language-context";
 import PixelBackground from "@/components/PixelBackground";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +32,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <LanguageProvider>{children}</LanguageProvider>
+          <LanguageProvider>
+            <SmoothScroll>{children}</SmoothScroll>
+          </LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

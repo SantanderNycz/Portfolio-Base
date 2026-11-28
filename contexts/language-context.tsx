@@ -69,6 +69,7 @@ const translations = {
     "contact.message": "Message",
     "contact.messagePlaceholder": "Your message...",
     "contact.send": "Send Message",
+    "contact.sending": "Sending...",
     "contact.downloadCV": "Download CV",
     "contact.success": "Message sent!",
 
@@ -130,6 +131,7 @@ const translations = {
     "contact.message": "Mensagem",
     "contact.messagePlaceholder": "Sua mensagem...",
     "contact.send": "Enviar Mensagem",
+    "contact.sending": "A enviar...",
     "contact.downloadCV": "Baixar CV",
     "contact.success": "Mensagem enviada!",
 
